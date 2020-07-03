@@ -1,0 +1,47 @@
+<nb-layout style="color: white;">
+
+    <nb-layout-column style="background-color: white; height:800px">
+
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+    <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+    <!-- * * * * * * * to get started with your project! * * * * * * * * -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    
+    <app-app-menu *ngIf="loginService.isUserLoggedIn(); else noChrome">
+      <router-outlet name="dashboard"></router-outlet>      
+    </app-app-menu>  
+    
+    <ng-template #noChrome>
+       <router-outlet name="login-page"></router-outlet>
+    </ng-template> 
+
+  <!-- <li *ngIf="bindEmail;then logout else login"></li>
+    <ng-template #logout><li><a routerLink="/logout">Logout</a></li></ng-template>
+    <ng-template #login><li><a routerLink="/login">Login</a></li></ng-template> -->
+
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+    <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    
+    
+    
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer  style="background-color: #728197;">
+    <div style="margin: 0px 0;">Follow us at      
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+  </nb-layout-footer>
+
+</nb-layout>

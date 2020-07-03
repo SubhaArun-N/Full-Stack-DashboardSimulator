@@ -1,0 +1,26 @@
+<nb-layout>
+    <nb-layout-header fixed>
+           <nb-icon matRipple
+                [matRippleUnbounded]="true"
+                [matRippleCentered]="true" (click)="toggleSidebar()" class="sidebar-toggle" icon="menu-2-outline"></nb-icon>
+            <h4 style="padding-left: 50px;">Ellie Admin</h4>        
+           
+            <div class="logout-btn" style="padding-left: 1250px;">
+            <a (click)="onLogout()" class="logout-item"><mat-icon>account_circle</mat-icon>&nbsp;&nbsp;Log out</a>
+            </div>      
+    </nb-layout-header>
+
+    <nb-sidebar class="menu-sidebar" responsive>
+        <div class="nbside-menu">
+            <nb-menu [items]="items" class="menu-items"></nb-menu>
+        </div>
+        
+    </nb-sidebar>
+
+    <nb-layout-column class="main-content">
+              
+       <router-outlet></router-outlet>
+    </nb-layout-column>
+</nb-layout>
+
+

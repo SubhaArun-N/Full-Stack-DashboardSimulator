@@ -1,0 +1,75 @@
+<section class="login-block">
+
+    <br><br>
+    <div class="container signLog">
+    <div class="row">
+    <div class="col-md-5 login-sec">
+        <mat-card class="login-card">
+            <mat-card-content>
+                <form #loginUser="ngForm" (ngSubmit)="onSubmit()">
+                    <br>
+                    <h2>Log In</h2>
+                        <br><br>
+                        <div class="myGroup" style="font-size: 16px">
+                            <mat-form-field class="username-input-field" appearance="outline">
+                                <i class="fa fa-user icon"></i> 
+                                <input matInput placeholder="Email"  required [(ngModel)]="username" name="username">
+                                <mat-error>Valid Email is required!</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <br>
+                        
+                        <div class="myGroup" style="font-size: 16px">
+                            <mat-form-field class="password-input-field" appearance="outline">
+                                <i class="fa fa-lock icon"></i> 
+                                 <input matInput type="password" placeholder="Password" required [(ngModel)]="password" name="password">
+                                 <mat-error>Invalid Password!</mat-error>
+                            </mat-form-field>
+                        </div>
+                        
+                        <a color="#fff" class="forgot-password"> <u>Forgot Password?</u> </a>
+                        <br><br><br>
+                        <div class="login">
+                            <button (click)="checkUserLogin()" mat-raised-button color="#fff" style="text-align: center;" class="login-button">SIGN ME IN</button>
+                        </div>                                
+                </form>                       
+                
+                <span style="color: black;">Dont have an account? </span>                                                
+                <a><u>Sign Up</u> </a>                          
+                  
+            </mat-card-content>
+        </mat-card>
+    </div>
+    
+    <!--<div class="col-md-7 banner-sec" style="padding-left: -50px;">-->
+    
+    <div id="carouselExamples" class="carousel slide" data-ride="carousel" style="padding-left: -150px;">
+    <ol class="carousel-indicators">
+    <li data-target="#carouselExamples" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExamples" data-slide-to="1"></li>
+    <li data-target="#carouselExamples" data-slide-to="2"></li>
+    </ol>
+    <!--<div class="carousel-inner" role="listbox" style="padding-left: -50px;">
+    
+    <div class="carousel-item active" style="padding-left: -50px;">-->
+    
+    <img class="d-block img-fluid" src="../assets/connecting-world.jpeg" style="width: 650px; height: 500px;   
+    margin: 3em auto;
+    text-align: left; " alt="First-slide">        
+    
+    </div>
+    
+    
+       
+    </div>
+    </div>
+   
+  
+  
+    
+     
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    </section>
+    
