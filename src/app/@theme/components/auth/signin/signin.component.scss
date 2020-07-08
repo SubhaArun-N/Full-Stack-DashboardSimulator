@@ -1,0 +1,114 @@
+/*.user-login{
+    background: #fff;
+    width:100%;
+  padding:50px;
+}*/
+
+.container-login100{
+    padding-left: 900px;
+  }
+  mat-card {
+      max-width: 400px;    
+      margin: 3em auto;
+      text-align: center;
+      height: 500px;
+      font-family:  Poppins-Regular;
+      border-radius: 6px;
+  
+    }
+     
+    mat-error{
+      color:red;
+      font-size: 12px;
+      font-family:  'Ubuntu', sans-serif;
+    }
+    mat-form-field {
+      background:#edf1f7;
+      display: block;    
+      border-radius: 8px;
+      box-shadow: 0 0 20px 1px rgba(32, 28, 28, 0.349);
+        }
+      
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.8em 2px !important;}
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-label { margin-top:-15px; }
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {color:#EEE2DC;}
+  ::ng-deep label.ng-star-inserted { transform: translateY(-0.59375em) scale(.75) !important; }
+  
+  .login-button{     
+      color: #fff;
+      width: 200px;
+      height: 30px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #15DB95, #52c59d);
+      border: 0;
+      padding-left: 40px;
+      padding-right:40px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      font-family: 'Ubuntu', sans-serif;    
+      font-size: 13px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+      }
+  
+    .login
+    {
+      padding-top: 20px;
+      padding-bottom: -70px;
+    }
+      
+    .btn{
+      padding-left: -5px;
+      padding-top: -15px;;
+      color:#107c65;
+      width:5px;
+      background:#5D5C61;
+     
+    }
+   .forgot-password{
+    float: left; 
+    padding-left: 18px; 
+    padding-top: 22px;
+  
+   }
+    h2{
+        color: black;
+        font-family:  'Ubuntu', sans-serif;
+        
+    }
+    .login-card{      
+      background:-webkit-linear-gradient(to bottom,#e5e7ee,#EEE2DC);
+      background: linear-gradient(to bottom,#e6e8f0,#EEE2DC);
+    }
+  
+  mat-form-field i{   
+      position: absolute;
+  }
+  input{
+    padding-left: 25px;
+  }
+  
+  .signLog {    
+    width:1200px;
+    margin-left: -320px;
+    background: #EDC7B7;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(71, 66, 66, 0.04); 
+  }
+  
+  .carousel-inner {
+    border-radius: 0 10px 10px 0;
+    right: -15px;
+  }
+  .carousel-item {
+    background:  #fff;
+  }
+  .carousel-caption {
+    text-align: left;
+    left: 5%;
+  }
+  ::ng-deep u{
+    color: linear-gradient(to right, #15DB95, #52c59d) !important;
+  }
+ .forgot-password{
+     color: black;
+ }

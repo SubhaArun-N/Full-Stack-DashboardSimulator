@@ -1,0 +1,59 @@
+.zoho-crm-card{
+    width: 407px;
+    height: 272px ;
+    border-radius: 8px;
+    /*box-shadow: 10px 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);*/
+    -webkit-box-shadow: 0 0 8px rgb(105, 103, 103);
+    box-shadow: 0 0 8px rgb(105, 103, 103);
+    /*background:-webkit-linear-gradient(to top,rgb(182, 234, 236),#D3E3FC);
+    background: linear-gradient(to bottom,rgb(182, 234, 236),#D3E3FC);   */
+    background: #EEE2DC;
+       
+}
+img{
+    padding-left: 30px;    
+    height: 100px;
+    width: 190px;
+}
+mat-card-content{
+    padding-top: 35px;
+}
+
+.content{
+    color: black;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif; 
+    font-size: 17px; 
+    font-weight: 555; 
+    font-family: cursive;
+    font-style: italic;
+}
+.mat-card-header{
+    background-color: #EEE2DC;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 4px #752b18;
+    box-shadow: 0 0 4px #64331a;
+    border: #000 !important;
+    padding-top: 4px;
+    height: 30px; 
+    text-align: center ;
+    font-size: 20px;
+    font-family: Trebuchet MS, sans-serif;   
+}
+::ng-deep .mat-card-header{
+    border-bottom-color: blue !important;
+}
+
+.clickhere-item{
+    color: black;
+    width: 110px;
+    background: #EDC7B7;
+    border: #000 !important;
+    border-radius: 5px;
+    height: 40px;      
+    margin-top: 6px;
+    font-family: 'Ubuntu', sans-serif;    
+    font-size: 13px;
+    box-shadow: 0 0 4px #64331a;
+
+}
