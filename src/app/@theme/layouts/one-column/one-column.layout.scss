@@ -2,22 +2,25 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 
+
+
 @include nb-install-component() {
   .menu-sidebar ::ng-deep .scrollable {
     padding-top: nb-theme(layout-padding-top);
   }
 }
-
 nb-layout-header{
-  background: #EDC7B7;
+ 
+    background: transparent;
+    color: blue;
+  
 }
-
 .menu-sidebar{  
   margin-left: 10px ; 
   margin-bottom: 10px;
   margin-top: 10px ;
   margin-right: 5px;
-  background:#EEE2DC;
+  background:transparent;
   border-radius: 8px;  
   box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);  
 }
@@ -27,7 +30,7 @@ nb-layout-header{
   margin-bottom: 10px;
   margin-top: 10px ;
   margin-right: 10px;
-  background:linear-gradient(to right,rgb(241, 237, 237),rgb(241, 237, 237));
+  background:transparent;
   border-radius: 8px;  
   box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
 }

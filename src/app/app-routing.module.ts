@@ -9,9 +9,9 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 
-import {
-  SigninComponent
-  } from './@theme/components/auth/signin/signin.component'
+import {SigninComponent } from './@theme/components/auth/signin/signin.component'
+import {SignupComponent } from './@theme/components/auth/signup/signup.component'
+
 
 export const routes: Routes = [
   {
@@ -29,7 +29,11 @@ export const routes: Routes = [
       {
         path: 'signin',
         component: SigninComponent,
-      },      
+      },  
+      {
+        path: 'signup',
+        component: SignupComponent,
+      }    
     ],
   },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },

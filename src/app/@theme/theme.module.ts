@@ -1,5 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ToasterModule } from 'angular2-toaster';
 import {
   NbActionsModule,
   NbLayoutModule,
@@ -15,6 +16,8 @@ import {
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSecurityModule } from '@nebular/security';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ButtonsModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
 
 import {
   FooterComponent,
@@ -46,9 +49,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from  '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCommonModule, MatRippleModule } from '@angular/material/core';
+import { SignupComponent } from './components/auth/signup/signup.component';
 
 
 const NB_MODULES = [
+  MDBBootstrapModule.forRoot(),
+  ButtonsModule,
+  WavesModule,
+  CardsModule,
+  ToasterModule,
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
@@ -92,7 +101,7 @@ const PIPES = [
 @NgModule({
   imports: [CommonModule, ...NB_MODULES],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
-  declarations: [...COMPONENTS, ...PIPES, SigninComponent],
+  declarations: [...COMPONENTS, ...PIPES, SigninComponent, SignupComponent],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders<ThemeModule> {
