@@ -50,11 +50,15 @@ import { MatIconModule } from  '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCommonModule, MatRippleModule } from '@angular/material/core';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import {AuthComponent} from './components/auth/auth.component'
+
+import { RouterModule } from '@angular/router';
 
 
 const NB_MODULES = [
   MDBBootstrapModule.forRoot(),
   ButtonsModule,
+  RouterModule,
   WavesModule,
   CardsModule,
   ToasterModule,
@@ -101,7 +105,7 @@ const PIPES = [
 @NgModule({
   imports: [CommonModule, ...NB_MODULES],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
-  declarations: [...COMPONENTS, ...PIPES, SigninComponent, SignupComponent],
+  declarations: [...COMPONENTS, ...PIPES, AuthComponent, SigninComponent, SignupComponent],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders<ThemeModule> {

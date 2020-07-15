@@ -6,8 +6,8 @@
     -webkit-box-shadow: 0 0 8px rgb(105, 103, 103);
     box-shadow: 0 0 8px rgb(105, 103, 103);
     /*background:-webkit-linear-gradient(to top,rgb(182, 234, 236),#D3E3FC);
-    background: linear-gradient(to bottom,rgb(182, 234, 236),#D3E3FC);   */
-    background: #EEE2DC;
+    background: #eee2dcgradient(to bottom,rgb(182, 234, 236),#D3E3FC);   */
+    background: transparent;
        
 }
 img{
@@ -29,7 +29,7 @@ mat-card-content{
     font-style: italic;
 }
 .mat-card-header{
-    background-color: #EEE2DC;
+    background-color: transparent;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 4px #752b18;
     box-shadow: 0 0 4px #64331a;
@@ -47,7 +47,7 @@ mat-card-content{
 .clickhere-item{
     color: black;
     width: 110px;
-    background: #EDC7B7;
+    background: transparent;
     border: #000 !important;
     border-radius: 5px;
     height: 40px;      

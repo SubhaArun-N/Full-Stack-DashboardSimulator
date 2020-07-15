@@ -31,7 +31,7 @@ import { ZohointegrationInformationComponent } from './api-integration/zohointeg
     PagesRoutingModule,
     ThemeModule,
     NbMenuModule,
-    DashboardModule,
+    
 
     MatGridListModule,
     MatCardModule,

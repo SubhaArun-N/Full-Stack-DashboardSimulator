@@ -1,94 +1,198 @@
 
-@import '~bootstrap/scss/mixins/breakpoints';
-@import '~@nebular/theme/styles/global/breakpoints';
-@import '../../../styles/themes';
 
-/*.user-login{
-    background: #fff;
-    width:100%;
-  padding:50px;
-}*/
+::ng-deep .nb-theme-default .columns
+{
+  background-image: url("../../../../../assets/frame.png") !important;  
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
 
-h2{
-  color: black;
-  font-family:  sans-serif;
+ 
+ .box{
+  position: absolute;
+  left: 64.93%;
+  right: 3.95%;
+  top: 20.44%;
+  bottom: 20.18%;
   
+  background: linear-gradient(180deg, #514089 0%, #3291BB 100%);
+  border-radius: 71px;
+  height: 500px;
+  width: 490px;
 }
 
-
-mat-card {
-  background:-webkit-linear-gradient(to bottom,#e5e7ee,#D1E8E2);
-  background: #e5e7ee;
-    max-width: 400px; 
-    padding-top: 50px;  
-    padding-bottom: 100px; 
-    margin: 3em auto;
-    text-align: center;
-    height: 530px;
-    font-family:  Poppins-Regular;
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-
-  }
-   
-  mat-error{
-    color:red;
-    font-size: 12px;
-    font-family:  'Ubuntu', sans-serif;
-  }
-
-  .myGroup{
-    padding-bottom:20px;
-    padding-left: 30px;
-    padding-right:30px;
-  }
+.box h2{
+  position: absolute;
+  left: 14.96%;
+  right: 13.98%;
+  top: 9.91%;
+  bottom: 70.18%;
   
-  mat-form-field {    
-    background:#edf1f7;
-    display: block; 
-    padding:1px;  border:none; 
-    border-radius: 8px;
-    box-shadow: 0 0 20px 1px rgba(32, 28, 28, 0.349);    
-    width: 100%;
-      }
-    input{
-      padding-left: 25px;
-      border: none;
-    }
-    
-::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.8em 2px !important;}
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-label { margin-top:-15px; }
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {color:#edf1f7;}
-::ng-deep label.ng-star-inserted { transform: translateY(-0.59375em) scale(.75) !important; }
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+ }
 
-.login-button{  
-    color: #fff;
-    width: 100%;
-    border-radius: 5px;
-    background: #40dc7e;
-    border: none;
-    padding:15px;
-    font-family: 'Ubuntu', sans-serif;    
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    }
-.login{
-  padding-left: 30px;
-  padding-right:30px;
-}
-
- .forgot-password{
-   float: left;
-  padding-left: 30px;    
-  color: #40dc7e;
+ .box h1{
+  position: absolute;
+  left: 11.2%;
+  right: 10.54%;
+  top: 15.82%;
+  bottom: 68.23%;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
   font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
  }
- .signup-item{
-   color: #40dc7e;
+ 
+ .rectangle{
+  position: absolute;
+  left: 17%;
+  right: 7.69%;
+  top: 23%;
+  bottom: 67.19%;   
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  width:327px;
+  height:1px;  
+  background: #EBE9ED;
  }
 
+.box .login-text{
+   height: 22px;
+   width: 53px;
+   position: absolute;
+   left: 44.3%;
+   right: 17.57%;
+   top: 25%;
+   bottom: 61.98%;
+ 
+   font-style: normal; 
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 22px;
+   /* identical to box height */
+   text-transform: none;
+   
+   color: #FFFFFF;
+ }
 
-mat-form-field i{   
-    position: absolute;
+ .box input
+{
+  margin-left: 83px;
+  right: 68px;
+  bottom: 66.55%;
+  background: #FFFFFF;
+  opacity: 0.29;
+  border-radius: 18px;
+  border: none;
+  height: 32px;
+  width: 288px;
+  outline: none;
+
+  /*input*/
+
+  color: black;
+  font-family: sans-serif, 'Ubuntu';
+  font-size: 15px;
+  font-weight: bold;
 }
 
+.box form div{
+    position: relative;
+    padding: 15px;
+ }
+ .box form div label{
+    position: absolute;
+    margin-left: -275px;
+    margin-top: 7px;
+    color: white;
+    transition: .5s ease;
+    pointer-events: none;    
+
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 17px;
+   
+   color: #FFFFFF;   
+   opacity: 0.6;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  transform: translate3d(0, -0.42rem, 0) scale3d(0.92, 0.92, 1);
+  left: 380px !important;
+  top: -6.5px !important;    
+  font-size: 12px;
+  font-weight: bold;
+  border: none !important;
+}
+
+a{
+  position: absolute;
+  left: 60.5%;
+  right: 8.93%;
+  top: 64.5%;
+  bottom: 40.36%;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 12px;
+  
+  color: #FFFFFF;  
+  opacity: 0.6;
+ }
+
+
+
+.login-button{
+  position: absolute;
+  left: 159.3px;
+  right: 126px;
+  top: 64px;
+  bottom: 65px;
+  
+  height: 38px;
+  width: 173px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */  
+  color: #514189;
+}
+
+.create-account{
+position: absolute;
+left: 40%;
+top: 88.3%;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 12px;
+
+color: #FFFFFF;
+}

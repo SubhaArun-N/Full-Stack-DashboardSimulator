@@ -34,6 +34,6 @@ export class SigninComponent implements OnInit {
     onSubmit()
    {
      this.checkUserLogin();
-   }
+   } 
 
 }

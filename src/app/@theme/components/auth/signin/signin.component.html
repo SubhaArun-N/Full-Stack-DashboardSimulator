@@ -1,39 +1,30 @@
-<mat-card class="login-card">
+<div class="box">
     
-        <form #loginUser="ngForm" (ngSubmit)="onSubmit()">
-            <br>
-            <h2>Sign In</h2>
-                <br><br>
-                <div class="myGroup" style="font-size: 16px">
-                    <mat-form-field class="username-input-field" appearance="outline" >
-                        <i class="fa fa-user icon"></i> 
-                        <input matInput placeholder="Email"  required [(ngModel)]="username" name="username">
-                        <mat-error>Valid Email is required!</mat-error>
-                    </mat-form-field>
-                </div>
-                
-                
-                <div class="myGroup" style="font-size: 16px">
-                    <mat-form-field class="password-input-field" appearance="outline">
-                        <i class="fa fa-lock icon"></i> 
-                         <input matInput type="password" placeholder="password" required [(ngModel)]="password" name="password">
-                         <mat-error>Invalid Password!</mat-error>
-                    </mat-form-field>
-                </div>
-                
-                    <a  style="color: #40dc7e;" class="forgot-password"> <u>Forgot Password?</u> </a>
-                                        
-                <br><br><br>
-                <div class="login">
-                    <button (click)="checkUserLogin()" mat-raised-button class="login-button">SIGN ME IN</button>
-                </div>                                
-        </form>                       
-        
-        <div>
-            <small style="color: #999; font-size: 14px;">Dont have an account?                                                
-            <a href="/auth/signup" class="signup-item">Sign Up </a></small> 
+        <h2>Ellie Zoho</h2>
+        <h1>Ellie Zoho Extension</h1>
+        <div class="rectangle"></div>
+        <h1 class="login-text">Login</h1>
+
+        <form #loginUser="ngForm" (ngSubmit)="onSubmit()" style="margin-top: 210px;">
+
+        <div class="input-field">
+            <input type="text" id="username" placeholder="" [(ngModel)]="username" name="firstName" required="">
+            <label>Username</label>
         </div>
-                                  
-          
-  
-</mat-card>
+
+        <div>
+            <input type="password" id="password" placeholder="" [(ngModel)]="password" name="password" required="">
+            <label>Password</label>
+        </div>
+
+        <a style="color: white;" class="forgot-password">Forgot Password?</a>
+
+        <div class="login">
+            <button (click)="checkUserLogin()" mat-raised-button class="login-button">Login</button>
+        </div> 
+
+    </form>
+
+    <a style="color: white;" href="/auth/signup" class="create-account">Create New Account </a>
+
+</div>
