@@ -83,7 +83,6 @@
  color: #FFFFFF;
 }
 
-
 .box input
 {
 margin-left: 40px;
@@ -127,8 +126,9 @@ font-weight: bold;
 
 input:focus ~ label,
 input:valid ~ label {
-    left: 330px !important;
-  top: -4px !important;    
+  transform: translate3d(0, -0.42rem, 0) scale3d(0.92, 0.92, 1);
+  left: 330px !important;
+  top: -3.1px !important;    
   font-size: 12px;
   font-weight: bold;
   border: none !important;
@@ -142,7 +142,7 @@ input:valid ~ label {
 .signup-button{
     margin-top: 16px;
     margin-left: 105px;
-   right: 126px;
+    right: 126px;
     height: 38px;
     width: 173px;
     background: #FFFFFF;
@@ -166,7 +166,7 @@ input:valid ~ label {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 12px;
     
     color: #FFFFFF;
