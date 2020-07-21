@@ -5,10 +5,10 @@
         <div class="rectangle"></div>
         <h1 class="login-text">Login</h1>
 
-        <form #loginUser="ngForm" (ngSubmit)="onSubmit()" style="margin-top: 210px;">
+        <form #loginUser="ngForm" (ngSubmit)="onSubmit()">
 
         <div class="input-field">
-            <input type="text" id="username" placeholder="" [(ngModel)]="username" name="firstName" required="">
+            <input type="text" id="username" placeholder="" [(ngModel)]="username" name="email" required="">
             <label>Username</label>
         </div>
 
@@ -17,10 +17,10 @@
             <label>Password</label>
         </div>
 
-        <a style="color: white;" class="forgot-password">Forgot Password?</a>
+        <a style="color: white;"  routerLink="/auth/forgot-password" class="forgot-password">Forgot Password?</a>
 
         <div class="login">
-            <button (click)="checkUserLogin()" mat-raised-button class="btn btn-block">Login</button>
+            <button  mat-raised-button class="btn btn-block btn-hero-success" (click)="checkUserLogin()">Login</button>
         </div> 
 
     </form>

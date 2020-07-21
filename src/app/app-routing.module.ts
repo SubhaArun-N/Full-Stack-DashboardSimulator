@@ -9,11 +9,12 @@ import {
   NbResetPasswordComponent,
 } from '@nebular/auth';
 
-import {SigninComponent } from './@theme/components/auth/signin/signin.component';
-import {SignupComponent } from './@theme/components/auth/signup/signup.component';
-
 import {AuthComponent } from './@theme/components/auth/auth.component'
 
+import { SigninComponent } from './@theme/components/auth/signin/signin.component';
+import { SignupComponent } from './@theme/components/auth/signup/signup.component';
+import { ForgotpwdComponent} from './@theme/components/auth/forgotpwd/forgotpwd.component';
+import { ResetpwdComponent }  from './@theme/components/auth/resetpwd/resetpwd.component';
 
 export const routes: Routes = [
   {
@@ -35,7 +36,15 @@ export const routes: Routes = [
       {
         path: 'signup',
         component: SignupComponent,
-      }    
+      },
+      {
+        path: 'forgot-password',
+        component: ForgotpwdComponent,
+      }, 
+      {
+        path: 'confirmation',
+        component: ResetpwdComponent,
+      },    
     ],
   },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },

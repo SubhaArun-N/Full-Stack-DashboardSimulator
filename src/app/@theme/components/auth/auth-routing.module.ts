@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {AuthComponent} from './auth.component';
 import {SigninComponent } from './signin/signin.component';
 import {SignupComponent } from './signup/signup.component';
+import {ForgotpwdComponent} from './forgotpwd/forgotpwd.component';
 
 export const routes: Routes = [{
   // .. some other app routs
@@ -18,6 +19,10 @@ export const routes: Routes = [{
     {
       path: 'signup',
       component: SignupComponent,
+    },
+    {
+      path: 'forgot-password',
+      component: ForgotpwdComponent,
     },
         
   ],

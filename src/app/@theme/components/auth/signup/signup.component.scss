@@ -19,11 +19,11 @@
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     background: linear-gradient(180deg, #514089 0%, #FFFFFF 0%, #FFFFFF 0%, #50418A 0.01%, #3291BB 100%);
     border-radius: 71px;
-    height: 615px;
-    width: 490px;
+    height: 579px;
+    width: 425px;
 }
 .box h2{
-    left: 14.96%;
+    left: 13.6%;
     right: 13.98%;
     top: 9.91%;
     bottom: 70.18%;
@@ -39,7 +39,7 @@
 }
 
 .box h1{
-    left: 11.2%;
+    left: 10.4%;
     right: 10.54%;
     top: 15.82%;
     bottom: 68.23%;
@@ -56,7 +56,7 @@
 
 .rectangle{
     position: absolute;
-    left: 17%;
+    left: 11.2%;
     right: 7.69%;
     top: 20%;
     bottom: 67.19%;   
@@ -66,9 +66,13 @@
     background: #EBE9ED;
    }
 
+   form{
+    margin-top: 70px;
+   }
+
 .box .signup-text{ 
  position: absolute;
- left: 19%;
+ margin-left: 8%;
  right: 17.57%;
  top: 20.43%;
  bottom: 70.7%;
@@ -85,7 +89,8 @@
 
 .box input
 {
-margin-left: 40px;
+margin-left: 13px;
+top: 20px;
 right: 68px;
 bottom: 66.55%;
 background: #FFFFFF;
@@ -109,7 +114,7 @@ font-weight: bold;
  .box form div label{
     position: absolute;
     top: 21px; 
-    margin-left: -270px;
+    margin-left: -275px;
     color: white;
     transition: .5s;
     pointer-events: none;    
@@ -126,9 +131,9 @@ font-weight: bold;
 
 input:focus ~ label,
 input:valid ~ label {
-  transform: translate3d(0, -0.42rem, 0) scale3d(0.92, 0.92, 1);
+  transform: translate3d(0rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
   left: 330px !important;
-  top: -3.1px !important;    
+  top: -0.8px !important;    
   font-size: 12px;
   font-weight: bold;
   border: none !important;
@@ -140,8 +145,8 @@ input:valid ~ label {
 }*/
 
 .signup-button{
-    margin-top: 16px;
-    margin-left: 105px;
+    margin-left: 71.5px;
+    margin-top: 14px;
     right: 126px;
     height: 38px;
     width: 173px;
@@ -159,9 +164,8 @@ input:valid ~ label {
 
   .box .signin{
     position: absolute;
-    left: 38%;
-    right: 15.74%;
-    top: 550px;
+    left: 34.7%;
+    top: 546px;
     
     font-family: Montserrat;
     font-style: normal;
@@ -171,3 +175,7 @@ input:valid ~ label {
     
     color: #FFFFFF;
     }
+
+    .signup-button:focus{
+        outline: none;
+      }
