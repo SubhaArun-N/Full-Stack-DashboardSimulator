@@ -46,7 +46,7 @@ export class SigninComponent implements OnInit {
         this.notifyService.showError("Incorrect password", "Ellie Zoho");
       }
       else if(result.status==-2){
-        this.notifyService.showError("Incorrect username. If you are new user, please create new account", "Ellie Zoho");
+        this.notifyService.showError("Incorrect username. If you are a new user, please create new account", "Ellie Zoho");
       }
       
       });   
