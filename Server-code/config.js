@@ -5,7 +5,7 @@ config = {
     mysql_pool : {
         host:'localhost',
         user: 'root',
-        password: 'password',
+        password: '*****',   //mysql password
         database: 'zoho_crm',  
         multipleStatements: true
     }
