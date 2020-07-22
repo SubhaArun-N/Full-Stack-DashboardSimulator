@@ -1,42 +1,42 @@
- <div class="box">
-        <h2>Ellie Zoho</h2>
-        <h1>Ellie Zoho Extension</h1>
-        <div class="rectangle"></div>
-        <h1 class="signup-text">Sign up</h1>
-        <form>
+<div class="box">
+    <h2>Ellie Zoho</h2>
+    <h1>Ellie Zoho Extension</h1>
+    <div class="rectangle"></div>
+    <h1 class="signup-text">Sign up</h1>
+    <form #userDetails="ngForm" (ngSubmit)="onSubmit()">
 
-        <div class="input-field">
-            <input type="text" id="username" placeholder=""  name="firstName" required="">
-            <label>Username</label>
-        </div>
-
-        <div>
-            <input  type="email" name="" required="">
-            <label>E-mail Id</label>
-        </div>
-
-        <div>
-            <input type="text" id="phone" placeholder=""  name="phone" required="">
-            <label>Phone number</label>
-        </div>
-
-        <div>
-            <input type="password" id="password" placeholder=""  name="password" required="">
-            <label>Password</label>
-        </div>
-
-        <div>
-            <input type="password" id="repeatPassword" placeholder=""   name="repeatPassword" required="">
-            <label>Repeat password</label>
-        </div>  
-   
-        <div class="signup">
-            <button mat-raised-button class="signup-button">Sign up</button>
-        </div> 
-    
-        </form>
-
-        <a style="color: white;" routerLink="/auth/signin" class="signin">Already have an account? </a>   
-    
+    <div class="form-group">
+        <input matInput type="text"  class="form-control" id="username" placeholder=""  name="userName" [(ngModel)]="username" required="">
+        <label>Full Name</label>
     </div>
 
+    <div class="form-group">
+        <input matInput type="email"  class="form-control" id="email" name="email" [(ngModel)]="email" required="">
+        <label>E-mail</label>
+    </div>
+
+    <div class="form-group">
+        <input matInput type="text"  class="form-control" id="phone" placeholder="" [(ngModel)]="phone"  name="phone" required="">
+        <label>Phone number</label>
+    </div>
+
+    <div class="form-group">
+        <input matInput type="password"  class="form-control" id="password" placeholder=""  name="password" required="">
+        <label>Password</label>
+    </div>
+
+    <div class="form-group">
+        <input matInput type="password"  class="form-control" id="repeatPassword" placeholder="" [(ngModel)]="password" name="repeatPassword" required="">
+        <label>Repeat password</label>
+    </div>  
+
+</form> 
+
+    <div class="signup">
+        <button mat-raised-button (click)="saveUserDetails()" class="btn">Sign up</button>
+    </div> 
+    
+
+    <a style="color: white;" routerLink="/auth/signIn" class="signin">Already have an account? </a>   
+
+</div>

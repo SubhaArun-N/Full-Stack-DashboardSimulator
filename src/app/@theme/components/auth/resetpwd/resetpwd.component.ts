@@ -14,7 +14,7 @@ export class ResetpwdComponent implements OnInit {
   }
 
   confirmPassword(){
-    this.router.navigate(['auth/signin']);
+    this.router.navigate(['auth/signIn']);
   }
 
 }

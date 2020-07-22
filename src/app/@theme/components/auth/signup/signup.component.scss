@@ -87,12 +87,16 @@
  color: #FFFFFF;
 }
 
+.box .form-group{
+    margin: 2px;
+}
+
 .box input
 {
 margin-left: 13px;
-top: 20px;
+top: -25px;
 right: 68px;
-bottom: 66.55%;
+bottom: -25px;
 background: #FFFFFF;
 opacity: 0.29;
 border-radius: 18px;
@@ -114,7 +118,7 @@ font-weight: bold;
  .box form div label{
     position: absolute;
     top: 21px; 
-    margin-left: -275px;
+    margin-left: 19px;
     color: white;
     transition: .5s;
     pointer-events: none;    
@@ -131,8 +135,8 @@ font-weight: bold;
 
 input:focus ~ label,
 input:valid ~ label {
-  transform: translate3d(0rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
-  left: 330px !important;
+  transform: translate3d(-0.2rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
+  left: 20px !important;
   top: -0.8px !important;    
   font-size: 12px;
   font-weight: bold;
@@ -144,9 +148,9 @@ input:valid ~ label {
     border-bottom: 2px solid black ;
 }*/
 
-.signup-button{
-    margin-left: 71.5px;
-    margin-top: 14px;
+.btn{
+    margin-left: 213px;
+    margin-top: 5px;
     right: 126px;
     height: 38px;
     width: 173px;
@@ -160,12 +164,13 @@ input:valid ~ label {
     line-height: 17px;
     /* identical to box height */  
     color: #514189;
+    text-transform: none;
   }
 
   .box .signin{
     position: absolute;
     left: 34.7%;
-    top: 546px;
+    top: 547px;
     
     font-family: Montserrat;
     font-style: normal;
@@ -176,6 +181,7 @@ input:valid ~ label {
     color: #FFFFFF;
     }
 
-    .signup-button:focus{
+
+    .btn:focus{
         outline: none;
       }

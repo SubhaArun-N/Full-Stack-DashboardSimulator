@@ -30,11 +30,11 @@ export const routes: Routes = [
         component: SigninComponent,
       },
       {
-        path: 'signin',
+        path: 'signIn',
         component: SigninComponent,
       },  
       {
-        path: 'signup',
+        path: 'signUp',
         component: SignupComponent,
       },
       {
@@ -47,8 +47,8 @@ export const routes: Routes = [
       },    
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  /*{ path: '**', redirectTo: 'pages' },*/
 ];
 
 const config: ExtraOptions = {

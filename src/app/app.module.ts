@@ -25,8 +25,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from  '@angular/material/icon';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule,
+         FormsModule} from '@angular/forms';
+
 import { MatCommonModule, MatRippleModule } from '@angular/material/core';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,6 +47,7 @@ import { MatCommonModule, MatRippleModule } from '@angular/material/core';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    ToastrModule.forRoot(),
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),

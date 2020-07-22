@@ -8,8 +8,8 @@
         <form #loginUser="ngForm" (ngSubmit)="onSubmit()">
 
         <div class="input-field">
-            <input type="text" id="username" placeholder="" [(ngModel)]="username" name="email" required="">
-            <label>Username</label>
+            <input type="text" id="username" placeholder="" [(ngModel)]="email" name="email" required="">
+            <label>Email</label>
         </div>
 
         <div>
@@ -20,11 +20,11 @@
         <a style="color: white;"  routerLink="/auth/forgot-password" class="forgot-password">Forgot Password?</a>
 
         <div class="login">
-            <button  mat-raised-button class="btn btn-block btn-hero-success" (click)="checkUserLogin()">Login</button>
+            <button  mat-raised-button class="btn btn-block btn-hero-success">Login</button>
         </div> 
 
     </form>
 
-    <a style="color: white;" routerLink="/auth/signup" class="create-account">Create New Account </a>
+    <a style="color: white;" routerLink="/auth/signUp" class="create-account">Create New Account </a>
 
 </div>
