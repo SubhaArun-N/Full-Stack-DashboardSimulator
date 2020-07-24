@@ -1,12 +1,32 @@
 import { Injectable } from '@angular/core';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor() { }
-  authenticate(username, password)
+  constructor(private httpClient: HttpClient) { }
+
+
+
+  authenticate(newUserLogin: any):Observable<any>
+  {
+    const httpOptions = 
+    {
+      headers: new HttpHeaders(
+      { 
+         'Authorization': 'Your Token',
+         'Content-Type': 'application/json'
+      })
+    }
+  
+    //const body=JSON.stringify(newUserDetail);
+    return this.httpClient.post('http://localhost:3000/auth/signIn',newUserLogin,httpOptions);  
+  }
+
+/*  authenticate(username, password)
   {
     if(username ==="subha" && password ==="password"){
       sessionStorage.setItem('username',"user")        
@@ -33,5 +53,7 @@ getRoleName()
   if(this.isUserLoggedIn()){
     return sessionStorage.getItem('role')
   }
-}
+}*/
+
+
 }

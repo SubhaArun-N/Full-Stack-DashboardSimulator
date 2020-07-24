@@ -9,7 +9,7 @@ export class HttpClientService {
 
   constructor(private httpClient: HttpClient) { }
 
-  zohoApiIntegration(newZohoIntegtaion:any):Observable<any>
+zohoApiIntegration(newZohoIntegtaion:any):Observable<any>
 {
   const httpOptions = {
     headers: new HttpHeaders(
@@ -38,19 +38,6 @@ saveUserDetails(newUserDetail:any):Observable<any>
   return this.httpClient.post('http://localhost:3000/auth/signUp',newUserDetail,httpOptions);    
 }
 
-checkUserLogin(newUserLogin: any):Observable<any>
-{
-  const httpOptions = 
-  {
-    headers: new HttpHeaders(
-    { 
-       'Authorization': 'Your Token',
-       'Content-Type': 'application/json'
-    })
-  }
 
-  //const body=JSON.stringify(newUserDetail);
-  return this.httpClient.post('http://localhost:3000/auth/signIn',newUserLogin,httpOptions);  
-}
 
 }

@@ -23,6 +23,7 @@ import { AmazonsellerCardComponent } from './api-integration/amazonseller-card/a
 import { ZohocrmDataComponent } from './api-integration/zohocrm-data/zohocrm-data.component';
 import { QuickbooksDataComponent } from './api-integration/quickbooks-data/quickbooks-data.component';
 import { ZohointegrationInformationComponent } from './api-integration/zohointegration-information/zohointegration-information.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 
@@ -31,8 +32,7 @@ import { ZohointegrationInformationComponent } from './api-integration/zohointeg
     PagesRoutingModule,
     ThemeModule,
     NbMenuModule,
-    
-
+    DragDropModule,
     MatGridListModule,
     MatCardModule,
     FormsModule,
@@ -56,6 +56,7 @@ import { ZohointegrationInformationComponent } from './api-integration/zohointeg
     ZohocrmDataComponent,
     QuickbooksDataComponent,
     ZohointegrationInformationComponent,
+    
   ],
 })
 export class PagesModule {

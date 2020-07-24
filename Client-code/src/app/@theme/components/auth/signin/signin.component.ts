@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from '../../../../service/authentication.service';
-import { HttpClientService } from '../../../../service/http-client.service';
 import {Credentials} from '../../../../models/Credentials';
 import { NotificationService } from  '../../../../service/notification.service';
 
@@ -18,7 +17,7 @@ export class SigninComponent implements OnInit {
   invalidLogin = false;
   submitted = false;
 
-  constructor(private router: Router,public loginService:AuthenticationService, private httpClientService:HttpClientService, private notifyService: NotificationService) { }
+  constructor(private router: Router,public loginService:AuthenticationService, private notifyService: NotificationService) { }
 
   ngOnInit(): void {
   }  
@@ -36,7 +35,7 @@ export class SigninComponent implements OnInit {
    checkUserLogin(){
     console.log('inside user login');
     this.credentials = { email:this.email, password : this.password};
-    this.httpClientService.checkUserLogin(this.credentials).subscribe(
+    this.loginService.authenticate(this.credentials).subscribe(
       result => {
       if(result.status==1){
         this.submitted=true;       

@@ -109,7 +109,7 @@
 
   /*input*/
 
-  color: black;
+  color: black 100%;
   opacity: -2pxl;
   font-family: sans-serif, 'Ubuntu';
   font-size: 15px;
@@ -215,4 +215,9 @@ color: #FFFFFF;
   line-height: 12px;
 
   color: white;
+}
+
+.forgot-password:hover{
+  background-image:none !important;
+background-color:#514089 0% !important;
 }
