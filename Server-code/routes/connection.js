@@ -1,6 +1,5 @@
 const express = require('express');
 var mysql = require('mysql');
-const config = require('../config');
 
 var pool  = mysql.createPool({
     host:'localhost',
@@ -28,21 +27,3 @@ let connection = () => {
 module.exports = { connection: connection };
 
 
-/*var mysqlConnection = mysql.createConnection({
-    
-    host:'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'zoho_crm',  
-    multipleStatements: true
-
-});
-
-mysqlConnection.connect((err) =>{
-    if(!err){
-        console.log("DB connection succeeded");        
-    }
-    else{
-        console.log("DB connection failed \n Error: " + JSON.stringify(err, undefined, 2));
-    }
-});*/
