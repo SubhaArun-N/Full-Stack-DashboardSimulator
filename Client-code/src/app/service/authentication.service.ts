@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { tap } from  'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,9 @@ export class AuthenticationService {
 
   constructor(private httpClient: HttpClient) { }
 
+ 
 
-
-  authenticate(newUserLogin: any):Observable<any>
+  authenticate(Credentials: any):Observable<any>
   {
     const httpOptions = 
     {
@@ -23,37 +24,20 @@ export class AuthenticationService {
     }
   
     //const body=JSON.stringify(newUserDetail);
-    return this.httpClient.post('http://localhost:3000/auth/signIn',newUserLogin,httpOptions);  
+    return this.httpClient.post('http://localhost:3000/auth/signIn',Credentials,httpOptions)
   }
 
-/*  authenticate(username, password)
-  {
-    if(username ==="subha" && password ==="password"){
-      sessionStorage.setItem('username',"user")        
-           return true;
-    }else
-    {
-      return false;
-    }
+
+  signOut() {
+    localStorage.removeItem("ACCESS_TOKEN");    
   }
 
+/*
 isUserLoggedIn()
     {
       let user=sessionStorage.getItem('username')
       console.log(!(user===null))
       return !(user===null)
     }
-
-logOut()
-    {
-      sessionStorage.removeItem('username')
-    }
-getRoleName()
-{
-  if(this.isUserLoggedIn()){
-    return sessionStorage.getItem('role')
-  }
-}*/
-
-
+    */
 }

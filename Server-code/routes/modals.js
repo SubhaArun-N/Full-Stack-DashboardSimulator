@@ -2,15 +2,21 @@ var express = require('express');
 var router = express.Router();
 var connect = require('./connection');
 var moment = require('moment');
+var hashing = require('./hashing');
+var jwt = require('jsonwebtoken');
 
+const jwtKey = "my_secret_key"
+const jwtExpirySeconds = 300
 
 router.post('/signUp', (req, res) => {
     console.log('inside signup', req.body);
     let user =  req.body;
     let sql_post_signup_data = `insert into list_users SET?`;
+
+    //console.log(hashing.encrypt(user.password));
     
     var values = {'username': user.username, 'email': user.email, 'phone': user.phone,
-                  'password': user.password,'first_login': 'Y', 'created_on': moment(new Date())}
+                  'password': hashing.encrypt(user.password),'first_login': 'Y', 'created_on': moment(new Date())}                  
     
     connect.connection()
         .then((con) => {
@@ -36,6 +42,7 @@ router.post('/signUp', (req, res) => {
 router.post('/signIn', (req, res) => {
     
     console.log('inside signin', req.body);
+    const { username, password } = req.body
     let sql_login_data = `select * from list_users where email='${req.body.email}'`;
     connect.connection()
         .then((con) => {
@@ -48,11 +55,19 @@ router.post('/signIn', (req, res) => {
                 if(result.length>0){
                     if(result){
                         console.log("Checking password: " + result[0].password)
-                        if (result[0].password == req.body.password) {
+                        if (hashing.decrypt(result[0].password) == req.body.password) {
+
+                             const token = jwt.sign({ username }, jwtKey, {
+                                algorithm: "HS256",
+                                expiresIn: jwtExpirySeconds,
+                             })
+                            
+                            // console.log("token:", token)
+
                             // console.log('db anme',config.CONNECTION_STRINGS[config.database]['database']);
                             // config.CONNECTION_STRINGS[config.database]['database'] = result[0].db_name;
                             // console.log('db anme new',config.CONNECTION_STRINGS[config.database]['database']);
-                            res.json({ status: 1 })
+                            res.json({ status: 1, token: token })
                         }
                         else {
                             res.json({ status: -1 })
