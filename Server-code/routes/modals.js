@@ -67,7 +67,7 @@ router.post('/signIn', (req, res) => {
                             // console.log('db anme',config.CONNECTION_STRINGS[config.database]['database']);
                             // config.CONNECTION_STRINGS[config.database]['database'] = result[0].db_name;
                             // console.log('db anme new',config.CONNECTION_STRINGS[config.database]['database']);
-                            res.json({ status: 1, token: token })
+                            res.json({ status: 1, token: token, expiresIn: jwtExpirySeconds })
                         }
                         else {
                             res.json({ status: -1 })
@@ -84,5 +84,16 @@ router.post('/signIn', (req, res) => {
             res.json({ status: -3 })
         })
 })
+
+router.get('/me', function(req, res) {
+    var token = req.headers['x-access-token'];
+    if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
+    
+    jwt.verify(token, jwtKey, function(err, decoded) {
+      if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
+      
+      res.status(200).send(decoded);
+    });
+  });
 
 module.exports = router;

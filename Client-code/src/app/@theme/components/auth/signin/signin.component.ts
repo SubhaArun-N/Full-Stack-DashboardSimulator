@@ -39,9 +39,11 @@ export class SigninComponent implements OnInit {
       result => {
       if(result.status==1){
         this.submitted=true;    
-        localStorage.setItem('token', result.token);   
-        localStorage.setItem('isLoggedin', 'true');
-        localStorage.setItem('expiresAt', ((new Date()).getTime() + (3 * 60 * 60 * 1000)).toString() );
+        //console.log(result.token);
+        localStorage.setItem('token', result.token);           
+        localStorage.setItem('isLoggedIn', 'true');
+        //console.log(result.expiresIn);
+        localStorage.setItem('expiresIn', result.expiresIn);
         this.router.navigate(['pages/dashboard']);        
       }    
       else if(result.status==-1) {
