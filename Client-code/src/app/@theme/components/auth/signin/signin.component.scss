@@ -100,7 +100,7 @@
   right: 68px;
   bottom: 66.55%;
   background: #FFFFFF;
-  opacity: 0.29;
+  opacity: 0.34;
   border-radius: 18px;
   border: none;
   height: 32px;
@@ -109,11 +109,10 @@
 
   /*input*/
 
-  color: black 100%;
-  opacity: -2pxl;
+  color: black;
   font-family: sans-serif, 'Ubuntu';
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 16.1px;
+  font-weight: normal;
 }
 
 .box form div{
@@ -192,6 +191,10 @@ input:valid ~ label {
   outline: none;
 }
 
+.btn:hover{ 
+  box-shadow: 0 0 14px #514189;  
+}
+
 .create-account{
 position: absolute;
 left: 38%;
@@ -217,7 +220,3 @@ color: #FFFFFF;
   color: white;
 }
 
-.forgot-password:hover{
-  background-image:none !important;
-background-color:#514089 0% !important;
-}

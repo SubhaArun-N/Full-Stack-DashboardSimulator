@@ -98,7 +98,7 @@ top: -25px;
 right: 68px;
 bottom: -25px;
 background: #FFFFFF;
-opacity: 0.29;
+opacity: 0.34;
 border-radius: 18px;
 border: none;
 height: 32px;
@@ -107,8 +107,8 @@ outline: none;
 
 color: black;
 font-family: sans-serif, 'Ubuntu';
-font-size: 15px;
-font-weight: bold;
+font-size: 16.1px;
+font-weight: normal;
 }
 
 .box form div{
@@ -184,4 +184,7 @@ input:valid ~ label {
 
     .btn:focus{
         outline: none;
+      }
+      .btn:hover{ 
+        box-shadow: 0 0 14px #514189;  
       }
