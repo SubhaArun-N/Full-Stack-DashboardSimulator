@@ -32,7 +32,7 @@ export class AuthenticationService {
    console.log("removing access token...");
    
    localStorage.removeItem('token');
-   localStorage.removeItem('expiresAt');  
+   localStorage.removeItem('expiresIn');  
    localStorage.setItem('isLoggedIn', 'false');
 
    console.log("local storage");
