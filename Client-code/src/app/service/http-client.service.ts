@@ -33,7 +33,6 @@ saveUserDetails(newUserDetail:any):Observable<any>
        'Content-Type': 'application/json'
     })
   }
-
   //const body=JSON.stringify(newUserDetail);
   return this.httpClient.post('http://localhost:3000/auth/signUp',newUserDetail,httpOptions);    
 }
