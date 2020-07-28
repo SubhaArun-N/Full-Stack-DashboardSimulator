@@ -38,19 +38,14 @@ export class SigninComponent implements OnInit {
     this.loginService.authenticate(this.credentials).subscribe(
       result => {
       if(result.status==1){
-        this.submitted=true;    
-        //console.log(result.token);
-        localStorage.setItem('token', result.token);           
-        localStorage.setItem('isLoggedIn', 'true');
-        //console.log(result.expiresIn);
-        localStorage.setItem('expiresIn', result.expiresIn);
+        this.submitted=true;       
         this.router.navigate(['pages/dashboard']);        
       }    
       else if(result.status==-1) {
-        this.notifyService.showError("Incorrect password", "Ellie Zoho");
+        this.notifyService.showError("Invalid password", "Ellie Zoho");
       }
       else if(result.status==-2){
-        this.notifyService.showError("Incorrect username. If you are a new user, please create new account", "Ellie Zoho");
+        this.notifyService.showError("Invalid username. If you are a new user, please create a new account", "Ellie Zoho");
       }
       
       });   
