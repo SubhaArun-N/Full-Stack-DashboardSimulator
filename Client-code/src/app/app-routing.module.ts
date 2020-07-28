@@ -47,7 +47,7 @@ export const routes: Routes = [
       },    
     ],
   },
-  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  { path: '', redirectTo: '/auth/signIn', pathMatch: 'prefix'},
   /*{ path: '**', redirectTo: 'pages' },*/
 ];
 

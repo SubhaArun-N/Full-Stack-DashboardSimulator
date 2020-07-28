@@ -194,5 +194,8 @@ input:valid ~ label {
 
 .btn:hover
 { 
- box-shadow: 0 0 14px #514189;  
+ box-shadow: 0 0 14px #44377c;  
 }
+.btn:active{
+    transform: translateY(2px);
+  }
