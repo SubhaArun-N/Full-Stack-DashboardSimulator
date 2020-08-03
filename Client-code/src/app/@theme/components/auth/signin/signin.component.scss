@@ -68,10 +68,11 @@
   width:327px;
   height:1px;  
   background: #EBE9ED;
+  opacity: 0.6;
  }
 
  form{
-  margin-top: 190px;
+  margin-top: 185px;
  }
 
 .box .login-text{
@@ -138,7 +139,7 @@
 
 input:focus ~ label,
 input:valid ~ label {
-  transform: translate3d(0rem, -0.42rem, 0) scale3d(0.92, 0.92, 1);
+  transform: translate3d(-0.2rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
   left: 360px !important;
   top: -6.5px !important;    
   font-size: 12px;
@@ -195,13 +196,13 @@ input:valid ~ label {
 }
 
 .btn:active{
-  transform: translateY(2px);
+  transform: translateY(1.5px);
 }
 
 .create-account{
 position: absolute;
 left: 38%;
-top: 89%;
+top: 90%;
 
 font-family: 'Montserrat';
 font-style: normal;

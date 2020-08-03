@@ -15,10 +15,12 @@ import { SigninComponent } from './@theme/components/auth/signin/signin.componen
 import { SignupComponent } from './@theme/components/auth/signup/signup.component';
 import { ForgotpwdComponent} from './@theme/components/auth/forgotpwd/forgotpwd.component';
 import { ResetpwdComponent }  from './@theme/components/auth/resetpwd/resetpwd.component';
+import { AuthGaurdService } from './service/auth-gaurd.service';
 
 export const routes: Routes = [
   {
-    path: 'pages',
+    path: 'pages', 
+    canActivate: [AuthGaurdService],
     loadChildren: 'app/pages/pages.module#PagesModule' },
  
   {
@@ -47,8 +49,8 @@ export const routes: Routes = [
       },    
     ],
   },
-  { path: '', redirectTo: '/auth/signIn', pathMatch: 'prefix'},
-  /*{ path: '**', redirectTo: 'pages' },*/
+  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '**', redirectTo: 'pages' }, 
 ];
 
 const config: ExtraOptions = {

@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from  'rxjs/operators';
+ import {NotificationService } from './notification.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private notifyService: NotificationService) { }
 
  
 
@@ -25,17 +26,24 @@ export class AuthenticationService {
   
     //const body=JSON.stringify(newUserDetail);
     return this.httpClient.post('http://localhost:3000/auth/signIn',Credentials,httpOptions)
+      
+  }
+
+
+  isUserLoggedIn(){
+    if(localStorage.getItem('isLoggedIn') && localStorage.getItem('expiresAt') &&
+    (Number(localStorage.getItem('expiresAt'))) >= (new Date()).getTime())
+    {     
+      return true;
+    }    
   }
 
 
   signOut() {
-   console.log("removing access token...");
+   console.log("Signing out...clearing local storage...");
    
-   localStorage.removeItem('token');
-   localStorage.removeItem('expiresIn');  
-   localStorage.setItem('isLoggedIn', 'false');
+   localStorage.clear();
 
-   console.log("local storage");
    for (var i = 0; i < localStorage.length; i++)   {
        console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
    } 

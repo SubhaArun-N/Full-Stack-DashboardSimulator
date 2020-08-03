@@ -17,9 +17,24 @@ export class SigninComponent implements OnInit {
   invalidLogin = false;
   submitted = false;
 
-  constructor(private router: Router,public loginService:AuthenticationService, private notifyService: NotificationService) { }
+  constructor(private router: Router,public authService:AuthenticationService, private notifyService: NotificationService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    /*let username = localStorage.getItem('username');
+    console.log(!(username === null));
+    if(!(username === null)){
+      this.router.navigate(['pages/dashboard']);
+    }else{
+       localStorage.clear();
+
+    }*/
+
+    if(this.authService.isUserLoggedIn()){
+      this.router.navigate(['pages/dashboard']);
+    }
+    else{
+      localStorage.clear();
+    }
   }  
 
   /*checkUserLogin(){  
@@ -35,11 +50,17 @@ export class SigninComponent implements OnInit {
    checkUserLogin(){
     console.log('inside user login');
     this.credentials = { email:this.email, password : this.password};
-    this.loginService.authenticate(this.credentials).subscribe(
+    this.authService.authenticate(this.credentials).subscribe(
       result => {
       if(result.status==1){
-        this.submitted=true;       
-        this.router.navigate(['pages/dashboard']);        
+        this.submitted=true;              
+        console.log(result.token);
+        this.router.navigate(['pages/dashboard']); 
+        localStorage.setItem('token', result.token);          
+        localStorage.setItem('isLoggedIn', 'true' );
+        localStorage.setItem('username', this.email);      
+        localStorage.setItem('expiresAt', ((new Date()).getTime() + (3 * 60 * 60 * 1000)).toString() );     
+        
       }    
       else if(result.status==-1) {
         this.notifyService.showError("Invalid password", "Ellie Zoho");
@@ -47,8 +68,12 @@ export class SigninComponent implements OnInit {
       else if(result.status==-2){
         this.notifyService.showError("Invalid username. If you are a new user, please create a new account", "Ellie Zoho");
       }
+      else if((result.status == -1) && (result.status == -2)){
+        this.notifyService.showError("Invalid credentials", "Ellie Zoho");
+      }
       
       });   
+
    }
 
     onSubmit()

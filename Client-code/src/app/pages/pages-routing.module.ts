@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {ApiIntegrationComponent} from './api-integration/api-integration.component';
+import { RoleGaurdService } from './role-gaurd.service';
 
 
 const routes: Routes = [{
@@ -11,7 +12,7 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
-      path: 'dashboard',
+      path: 'dashboard',      
       component: DashboardComponent,
     },
     {

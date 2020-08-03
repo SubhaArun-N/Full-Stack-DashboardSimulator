@@ -59,16 +59,17 @@
     position: absolute;
     left: 11.2%;
     right: 7.69%;
-    top: 20%;
+    top: 17.6%;
     bottom: 67.19%;   
     transform: matrix(1, 0, 0, -1, 0, 0);
     width:327px;
     height:1px;  
     background: #EBE9ED;
+    opacity: 0.6;
    }
 
 form{
-    margin-top: 70px;
+    margin-top: 66.5px;
 }
 
 .box .signup-text{ 
@@ -95,7 +96,7 @@ form{
 .box input
 {
    margin-left: 13px;
-   top: -25px;
+   top: -26px;
    right: 68px;
    bottom: -25px;
    background: #FFFFFF;
@@ -121,7 +122,7 @@ form{
 .box form div label{
    position: absolute;
    top: 21px; 
-   margin-left: 19px;
+   margin-left: 26.5px;
    color: white;
    transition: .5s;
    pointer-events: none;    
