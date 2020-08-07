@@ -3,14 +3,19 @@ import { NbMenuItem } from '@nebular/theme';
 export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Dashboard',
-    icon: 'home-outline',
+    icon: 'grid-outline',
     link: '/pages/dashboard',
-    home: true,
+   
   },
   {
-    title: 'Api Integration',
-    icon: 'grid-outline',
+    title: 'API Integration',
+    icon: 'settings-outline',
     link: '/pages/apiintegration'    
+  },
+  {
+    title: 'Field Mapping',
+    icon: 'map-outline',
+         
   },
  
 ];

@@ -41,7 +41,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = 'default';
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  firstname = localStorage.getItem("firstname");
+  id = localStorage.getItem("user_id")
+
+  userMenu = [ { title: 'Log out' } ];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -51,7 +54,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private breakpointService: NbMediaBreakpointsService,
               private authenticationService: AuthenticationService,
               private router: Router) {
+                this.someFunction()
+                
   }
+
 
   ngOnInit() {
     this.currentTheme = this.themeService.currentTheme;
@@ -80,26 +86,44 @@ export class HeaderComponent implements OnInit, OnDestroy {
 /*
 *SignOut() function removes the stored access token in session storage
 */
-signOut(){
-  this.authenticationService.signOut();
-  this.router.navigate(['auth/signIn']);
-}  
+someFunction(){
+  this.menuService.onItemClick()
+  .subscribe((event) => {
+    this.onContextItemSelection(event.item.title);
+  });
+}
 
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
+
+
+  onContextItemSelection(title)
+  {
+    if (title == "Log out")
+    {
+      this.authenticationService.signOut();
+      this.router.navigate(['auth/signIn']);
+    }
   }
 
-  changeTheme(themeName: string) {
-    this.themeService.changeTheme(themeName);
-  }
-
-  toggleSidebar(): boolean {
-    this.sidebarService.toggle(true, 'menu-sidebar');
-    this.layoutService.changeLayoutSize();
-
-    return false;
-  }
+  /*signOut(){
+    this.authenticationService.signOut();
+    this.router.navigate(['auth/signIn']);
+  }  */
+  
+    ngOnDestroy() {
+      this.destroy$.next();
+      this.destroy$.complete();
+    }
+  
+    changeTheme(themeName: string) {
+      this.themeService.changeTheme(themeName);
+    }
+  
+    toggleSidebar(): boolean {
+      this.sidebarService.toggle(true, 'menu-sidebar');
+      this.layoutService.changeLayoutSize();
+  
+      return false;
+    }
 
   navigateHome() {
     this.menuService.navigateHome();

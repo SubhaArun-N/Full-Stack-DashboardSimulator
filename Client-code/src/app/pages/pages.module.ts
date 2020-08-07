@@ -11,6 +11,7 @@ import { MatCommonModule, MatRippleModule } from '@angular/material/core';
 import { NbCardModule } from '@nebular/theme';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -37,6 +38,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatCardModule,
     FormsModule,
     MatSelectModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     MatCommonModule,
     MatRippleModule,
@@ -58,6 +60,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ZohointegrationInformationComponent,
     
   ],
+  providers: [    
+    { provide: MatTooltipModule, useValue: {} }
+]
 })
 export class PagesModule {
 }

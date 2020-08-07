@@ -1,21 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {NbDialogRef} from '@nebular/theme';
 import { HttpClientService } from '../../../service/http-client.service';
 import {ZohoIntegration} from '../../../models/ZohoIntegration';
 import {NbDialogService} from '@nebular/theme';
 import { ZohointegrationInformationComponent } from '../zohointegration-information/zohointegration-information.component';
+import { NotificationService } from  '../../../service/notification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-zohocrm-data',
   templateUrl: './zohocrm-data.component.html',
-  styleUrls: ['./zohocrm-data.component.scss']
+  styleUrls: ['./zohocrm-data.component.scss'],
 })
 export class ZohocrmDataComponent implements OnInit {
 
-  zohoIntegration: ZohoIntegration=new ZohoIntegration();
-  submitted = false;
+  zohoIntegration: ZohoIntegration;
+  submitted = false;  
+  client_id;
+  client_secret;
+  website_url;
+  grant_token;
 
-  constructor(protected dialogRef: NbDialogRef<any>, private httpClientService:HttpClientService, private dialogService: NbDialogService) { }
+  constructor(protected dialogRef: NbDialogRef<any>, private httpClientService:HttpClientService, private dialogService: NbDialogService,
+    private router: Router, private notifyService: NotificationService) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +30,8 @@ export class ZohocrmDataComponent implements OnInit {
   close() {
     this.dialogRef.close();
   }
+
+ 
   
     /*getDataFromAPI(){
       this.httpClient.getData().subscribe((res) => {
@@ -38,11 +47,16 @@ export class ZohocrmDataComponent implements OnInit {
    }
 
     zohoApiIntegration(){
+      this.zohoIntegration = { client_id : this.client_id, client_secret:this.client_secret, website_url:this.website_url, grant_token : this.grant_token};
       this.httpClientService.zohoApiIntegration(this.zohoIntegration).subscribe(
-        data => {
-        console.log(data);
-        this.submitted=true;
-        });
+        result => {
+          if(result.status==1){
+            this.submitted=true;
+            this.notifyService.showSuccess("You are registered!", "Ellie Zoho");
+            this.close();
+          }     
+          
+          });   
     }
 
     onSubmit()

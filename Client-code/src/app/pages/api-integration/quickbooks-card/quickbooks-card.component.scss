@@ -1,62 +1,56 @@
-.zoho-crm-card{
-    width: 407px;
-    height: 272px ;
-    border-radius: 8px;
+.quick-book-card{
+    width: 400px;
+    height: 283px;
+    border-radius: 17px;
     /*box-shadow: 10px 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);*/
-    background: transparent;
+    box-shadow: 0 0 1rem rgba(8,46,78,.2);
     /*background:-webkit-linear-gradient(to top,rgb(182, 234, 236),#D3E3FC);
-    background: linear-gradient(to bottom,rgb(182, 234, 236),#D3E3FC);   */
-    -webkit-box-shadow: 0 0 8px rgb(105, 103, 103);
-    box-shadow: 0 0 8px rgb(105, 103, 103);
-   
-       
+    background: #eee2dcgradient(to bottom,rgb(182, 234, 236),#D3E3FC);   */
+    background: white;       
 }
+
+nb-card-header{
+    border-bottom: 1.3px  solid #DDDBDB;
+}
+
 img{
-    padding-left: 30px;    
-    height: 100px;
-    width: 190px;
+    margin-left: -20px;    
+    height: 135px;
+    width: 205px;
 }
-mat-card-content{
-    padding-top: 35px;
+nb-card-body{
+    margin-top: -20px;
 }
 
 .content{
     color: black;
     padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif; 
-    font-size: 17px; 
-    font-weight: 555; 
-    font-family: cursive;
+    font-family: 'Open Sans';
     font-style: italic;
-}
-.mat-card-header{
-    background-color: transparent;
-    -webkit-box-shadow: 0 0 4px #752b18;
-    box-shadow: 0 0 4px #64331a;
-    border-radius: 10px;
-    background: transparent;
-    border: #000 !important;
-    padding-top: 4px;
-    height: 30px; 
-    text-align: center ;
-    font-size: 20px;
-    font-family: Trebuchet MS, sans-serif;   
-}
-::ng-deep .mat-card-header{
-    border-bottom-color: blue !important;
+    font-weight: normal;
+    font-size: 14px;
+    
 }
 
-.clickhere-item{
-    color: black;
+.btn{
+    color: white;
     width: 110px;
-    background: transparent;
+    background: linear-gradient(180deg, #523C87 0%, #2CA2C5 100%);
     border: #000 !important;
-    border-radius: 5px;
+    border-radius: 4px;
     height: 40px;      
     margin-top: 6px;
-    font-family: 'Ubuntu', sans-serif;    
-    font-size: 13px;
-    box-shadow: 0 0 4px #64331a;
+    font-family: 'Open Sans';   
+    font-size: 12px;
 }
-
-
+.btn:focus{
+    border:none;
+}
+.btn:hover{ 
+    box-shadow: 0 0 6px #44377c;  
+}
+  
+.btn:active{
+  transform: translateY(1.5px);
+  background-color: linear-gradient(180deg, #523C87 0%, #2CA2C5 100%);
+}

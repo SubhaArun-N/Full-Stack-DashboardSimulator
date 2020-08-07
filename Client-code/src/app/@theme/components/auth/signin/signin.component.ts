@@ -53,12 +53,13 @@ export class SigninComponent implements OnInit {
     this.authService.authenticate(this.credentials).subscribe(
       result => {
       if(result.status==1){
-        this.submitted=true;              
-        console.log(result.token);
+        this.submitted=true;       
         this.router.navigate(['pages/dashboard']); 
         localStorage.setItem('token', result.token);          
         localStorage.setItem('isLoggedIn', 'true' );
-        localStorage.setItem('username', this.email);      
+        localStorage.setItem('username', this.email); 
+        localStorage.setItem('firstname', result.firstname);
+        localStorage.setItem('user_id', result.user_id);     
         localStorage.setItem('expiresAt', ((new Date()).getTime() + (3 * 60 * 60 * 1000)).toString() );     
         
       }    
@@ -68,10 +69,7 @@ export class SigninComponent implements OnInit {
       else if(result.status==-2){
         this.notifyService.showError("Invalid username. If you are a new user, please create a new account", "Ellie Zoho");
       }
-      else if((result.status == -1) && (result.status == -2)){
-        this.notifyService.showError("Invalid credentials", "Ellie Zoho");
-      }
-      
+            
       });   
 
    }

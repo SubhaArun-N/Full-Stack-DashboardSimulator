@@ -13,11 +13,12 @@ import { AppRoutingModule } from './app-routing.module';
 import {
   NbChatModule,
   NbDatepickerModule,
-  NbDialogModule,
+  NbDialogModule,  
   NbMenuModule,
   NbSidebarModule,  
   NbWindowModule,
 } from '@nebular/theme';
+
 
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +31,7 @@ import { MatCommonModule, MatRippleModule } from '@angular/material/core';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,6 +40,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
+    MatTooltipModule,
     MatFormFieldModule,
     MatCommonModule,
     MatRippleModule,
@@ -59,6 +62,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
   ],
+  providers: [    
+    { provide: MatTooltipModule }
+],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

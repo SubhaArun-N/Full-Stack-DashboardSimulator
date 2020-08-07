@@ -1,12 +1,22 @@
 <nb-card class="information-card">
-    
-    <nb-card-body>
-        <p class="content">This section offers information on how to integrate Zoho CRM</p>
+    <nb-card-header class="entry-title hd1" style="font-size: 18px;">Zoho Integration Guidelines</nb-card-header>
+    <nb-card-body style="margin-top: 15px;">
+            <ul>
+                <li>Goto <a href="https://accounts.zoho.com/developerconsole" style="color: #44377c;"> https://accounts.zoho.com/developerconsole</a>
+                    and add a Client id by filling necessary details.</li>
+                <li>From the Zoho developer console , copy and paste your client ID and client secret.</li>
+                <li>The url should be the complete url of your website . Example: https://yourwebsitename.com</li>
+                <li>Dont include '/' at the end of your website.</li>
+                <li>To receive the grant token,Click on the icon near the grant token.</li>
+                <li>You will be redirected to a page.Copy the URL and paste it in the grant token text field.</li>
+                <li>Click on Save to complete the Integration.</li>
+            </ul>      
+    </nb-card-body>
+    <nb-card-footer style="height:54px">        
         <div class="close-btn">
             <button mat-raised-button  (click)="close()" class='btn'>CLOSE</button>
-        </div>
-        
-    </nb-card-body>
+        </div>  
+    </nb-card-footer>
     
 </nb-card>
 

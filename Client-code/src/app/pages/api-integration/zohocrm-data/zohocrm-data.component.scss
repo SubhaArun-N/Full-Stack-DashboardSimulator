@@ -1,60 +1,90 @@
 
-nb-card{    
-    border-radius: 8px;    
-    height: 676px;
-    width: 500px;    
-    background: #EEE2DC;
+nb-card{     
+    width: 508px;  
+    height: 365px; 
+    background: #FFFFFF;
+    border-radius: 17px;
+    margin-top:-50px;
 }
 
-button.mat-icon-button .mat-icon{
-    vertical-align: top;
-  
+
+
+h4{
+    font-size: 18px;
+    font-family: Open Sans;
+   font-style: normal;
+   font-weight: 600;
 }
 
-.top-icon{
-    margin-left: -503px; 
-    margin-top: 8px;
-
+.btn {    
+   
+   background: #4C4C91;
+   color: white;
+   font-size: 12px;
+   height: 30px;
+   width: 30px;
 }
 
-.card-title{
-    text-align: center; 
-    font-weight: bold; margin-left: -10px;
-}
-.form-control:focus{
-    border:none;
-    box-shadow: none;
-}
-.btn{     
-    color: black;    
-    background: #EDC7B7;
-    border: #000 !important;
-    box-shadow: 0 0 4px #64331a;
-    border-radius: 5px;
-    height: 40px; 
-    width: 70px;  
-    float: right;
-    margin-left: 10px;
-    font-family: 'Ubuntu', sans-serif;    
+label{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
     font-size: 13px;
-    padding:5px;
-    
-    }
+    margin-left: -50px;
+}
 
-    label{
-        font-size:18px !important;    
-        color: black;   
-    }
+.close{
+    margin-top: -40px;
+}
+.close:focus{
+    border: none;
+}
+nb-card-header{
+    border-bottom: 1.3px  solid #DDDBDB;
+}
 
-    input{
-        border: none;
-    }
-    
-    fieldset{
-        padding-bottom: 12px;
-    }
-    #input-icons i{
-        padding-left: 10px;
-        position: absolute;
-    }
+::ng-deep .custom-tooltip{
+    color: white;
+    font-size:12px;
+    background-color: rgb(105,105,105);
+}
 
+::ng-deep input{
+    margin-left: -30px;
+    height: 30px;
+    width: 285px;    
+    margin-bottom:15px;
+
+   border: 1.8px  solid #dadfe6 !important;
+   box-sizing: border-box;
+   border-radius: 5px;
+}
+
+::ng-deep input:focus{
+  border-color: #4C4C91 !important;
+}
+
+.save-btn{
+    background: linear-gradient(180deg, #523C87 0%, #2CA2C5 100%);
+    border-radius: 4px;
+    height: 34px;
+    width: 57px;
+    border: none;
+    color: white;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 385px;
+}
+.save-btn:focus,
+.save-btn:active{
+    border:none;
+}
+.save-btn:hover{ 
+    box-shadow: 0 0 6px #44377c;  
+}  
+.save-btn:active{
+  transform: translateY(1.5px);
+}

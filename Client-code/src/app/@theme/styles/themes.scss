@@ -86,3 +86,24 @@ $nb-themes: nb-register-theme((
   slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
   slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
 ), dark, dark);
+
+$nb-themes: nb-register-theme(
+  (
+    sidebar-menu-item-highlight-color: #513D88,
+    menu-item-active-text-color: #513D88,
+    //menu-item-active-background-color: #513D88,
+    menu-item-icon-active-color: #513D88,
+    menu-item-icon-hover-color: #513D88,
+    menu-item-hover-text-color: #513D88,
+    menu-item-icon-width: 2.2rem,
+    sidebar-scrollbar-background-color: #513D88,
+    //sidebar-text-font-size: 	0.9375rem,  
+    menu-item-icon-color: rgba(81, 61, 136, 0.25),
+    menu-item-text-color: rgba(81, 61, 136, 0.25),
+    menu-text-color: rgba(81, 61, 136, 0.25),
+    menu-group-text-color: rgba(81, 61, 136, 0.25),
+    context-menu-min-width: 20px,
+  ),
+  default,
+  default
+);

@@ -11,7 +11,7 @@
 }
 nb-layout-header{
  
-    background: transparent;     
+    background: white;     
 }
 
 ::ng-deep .nb-theme-default .columns
@@ -19,12 +19,52 @@ nb-layout-header{
   background-image: none !important;
  }
 
+ @include nb-install-component() {
+  .menu-sidebar ::ng-deep  .main-container.main-container-fixed {
+   height: 638px;
+   width: 170px;   
+ }
+ }
+ 
+ @include nb-install-component(){
+   .expanded{
+     width: 170px;
+   }
+ }
+
+ ::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a{
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+
+ ::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a nb-icon{
+  
+  transform: translate3d(2.7rem, 0, 0);     
+  margin-top: -20px;
+  animation-name: pulse-light; 
+  text-align: center;
+}
+
+::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a .menu-title 
+{
+  transform: translate3d(-1rem, 0.9rem, 0);
+  text-align: center;
+}
+
+::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-0,
+::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-1,
+::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-2{
+  transform: translate3d(-1.7rem, 1rem, 0); 
+  font-size: 12px;
+}
+
+
 .menu-sidebar{  
   margin-left: 10px ; 
   margin-bottom: 10px;
   margin-top: 10px ;
   margin-right: 5px;
-  background:transparent;
+  background:white;
   border-radius: 8px;  
   box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);  
 }
@@ -37,12 +77,9 @@ nb-layout-header{
   border-radius: 8px;  
   box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
   background-image: none !important;
-  background:transparent;
+  background:rgba(255, 255, 255, 0.7);
 }
 
-::ng-deep .menu-sidebar ng-content nb-menu .menu-item 
-{
-  border-color: linear-gradient(to bottom,rgb(220, 242, 243),#EEE2DC);;
-  background: linear-gradient(to bottom,rgb(228, 236, 236),#EEE2DC);; 
-  
+::ng-deep .scrollable{
+  margin-top: -20px;
 }

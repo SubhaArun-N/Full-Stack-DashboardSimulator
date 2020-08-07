@@ -13,16 +13,6 @@
     width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
   }
 
-  nb-action {
-    height: auto;
-    display: flex;
-    align-content: center;
-  }
-
-  nb-user {
-    cursor: pointer;
-  }
-
   ::ng-deep nb-search button {
     padding: 0!important;
   }
@@ -32,27 +22,33 @@
     align-items: center;
     width: auto;
 
-    .sidebar-toggle {
+    .navigation {
       @include nb-ltr(padding-right, 1.25rem);
-      @include nb-rtl(padding-left, 1.25rem);
-      text-decoration: none;
-      color: nb-theme(text-hint-color);
-      nb-icon {
-        font-size: 1.75rem;
+      @include nb-rtl(padding-left,  1.25rem);
+      text-decoration: none;      
+      i {
+        font-size: 3.50rem;
+        color: #513D88;
+        border-radius: 12px;
       }
     }
 
     .logo {
-      padding: 0 1.25rem;
-      font-size: 1.75rem;
+      
+      font-size: 2rem;
       @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
       @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
       white-space: nowrap;
       text-decoration: none;
+      
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      color: #513D88;;
     }
   }
 
-  @include media-breakpoint-down(sm) {
+/*  @include media-breakpoint-down(sm) {
     .control-item {
       display: none;
     }
@@ -67,8 +63,47 @@
       display: none;
     }
   }
+}*/
 }
 
 a{
   cursor: pointer;
+}
+
+::ng-deep nb-user .user-container{
+  left: -70px;  
+}
+
+
+::ng-deep nb-user .user-container .user-picture{
+  border: 2px solid #C4C4C4;
+  color: #C4C4C4;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height */
+  
+  letter-spacing: 0.11em;
+}
+
+::ng-deep nb-user .user-container .info-container .user-name{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  
+  color: #000000;
+}
+
+::ng-deep .nb-theme-default nb-context-menu{
+  width:60px !important;
+  margin-left:-130px;
+  border: 1.5px solid #514189 !important;
+}
+
+::ng-deep .context-menu .menu-items > .menu-item a .menu-title {
+  color: #000000;
 }

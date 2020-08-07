@@ -1,87 +1,60 @@
+
+
 <nb-card class="zohoApiIntegration">
-    <nb-card-header class="card-title">Zoho CRM Integration
-     
-            <button mat-icon-button style="width: 10px;" inline=true (click)=onClick()><mat-icon class="top-icon" color="accent" > perm device information</mat-icon> </button>
-              
+
+    <nb-card-header>
+        <div>
+            <h4 translate>Zoho Integration
+                <button matTooltip="Info about the action" matTooltipPosition="below"  matTooltipClass="custom-tooltip" class="btn btn-hero-info btn-small mx-2" (click)=onClick()>
+                    <i _ngcontent-c52="" class="fa fa-info"></i>
+                </button>
+            </h4>
+            <button type="button" matTooltipClass="custom-tooltip" class="close" data-dismiss="modal" (click)=close()>&times;</button>
+    
+        </div>
     </nb-card-header>
 
-    <nb-card-body>
+    <nb-card-body style="margin-top: 10px;">
         <form  #receivedOrganization="ngForm" (ngSubmit)="onSubmit()">
                
-                <fieldset class="form-group">
-                    <label for="usernameControl" class="bmd-label-floating" floatLabel="always">User Identifier</label>
-                    <input type="text" class="form-control" required=""placeholder="Enter your User ID" [(ngModel)]="zohoIntegration.username" id="useridControl" name="userid" >
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="usernameControl" class="bmd-label-floating">Client ID</label>
-                    <input matInput type="text" class="form-control" required=""placeholder="Enter your Client ID" [(ngModel)]="zohoIntegration.client_id" id="clientidControl" name="clientid" >
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="usernameControl" class="bmd-label-floating">Client Secret</label>
-                    <input matInput type="text" class="form-control" placeholder="Enter your Client Secret" required="" [(ngModel)]="zohoIntegration.client_secret" id="clientsecretControl" name="clientsecret">
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="usernameControl" class="bmd-label-floating">Website URL</label>
-                    <input matInput type="text" class="form-control"  placeholder="http://websitename.com/" [(ngModel)]="zohoIntegration.website_url" id="urlControl" name="url" >
-                </fieldset>
-                <fieldset class="form-group" id="input-icons">
-                    <label for="usernameControl" class="bmd-label-floating">Grant Token</label>
-                    <i class="fa fa-lock icon"></i> 
-                    <input matInput type="text" class="form-control" id="input-field" required=""  placeholder="Instructions to generate grant token"  [(ngModel)]="zohoIntegration.grant_token" id="grantokenControl" name="granttoken" >
-                </fieldset>                   
-                  
+                <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <label class="" translate>Client ID</label>
+                </div>
+                <div class="col-md-6">
+                    <input nbInput  id="clientid" type="text" placeholder="" [(ngModel)]="client_id" name="clientid"  required />
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 mt-2">
+                    <label class="" translate>Client Secret</label>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <input  nbInput  id="authtoken" type="text" placeholder="" [(ngModel)]="client_secret" name="clientsecret" required />
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 mt-2">
+                    <label class="" translate>URL of the website</label>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <input nbInput  id="id" type="text" placeholder="" [(ngModel)]="website_url" name="zohocrmurl" required />
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 mt-2 mb-3">
+                    <label class="" translate>Grant Token</label>
+                </div>
+                <div class="col-md-6 mt-2 mb-3">
+                    <input nbInput  id="grandtoken"  placeholder="" [(ngModel)]="grant_token" name="granttoken"  required />                    
+                </div>               
+            </div>
         </form>
-
-        <!--<div>
-            <form id="client-form" #someForm="ngForm" class="example-form">
-                <mat-form-field class="example-full-width">
-                    User Name<input matInput placeholder="User Name" value="username" ngModel name="username">
-                </mat-form-field>
-
-                <mat-form-field class="example-full-width">
-                  Client ID<input matInput placeholder="Client ID" value="client-id" ngModel name="client-id">
-                </mat-form-field>
-              
-                <mat-form-field class="example-full-width">
-                  Client Secret<input matInput placeholder="Client Secret" value="client-secret" ngModel name="client-secret">
-                </mat-form-field>
-              
-                <mat-form-field class="example-full-width" color="accent">
-                 Website URL <input matInput placeholder="Website URL" value="url" ngModel name="url">
-                </mat-form-field>
-
-                <mat-form-field class="example-full-width"> 
-                    Grant Token<input matInput placeholder="Grant Token" value="grant-token" ngModel name="grant-token">
-                </mat-form-field>
-
-            </form>           
-        </div>-->
-
-        <!--<div class="crm-container">
-            <div class="container-item">
-                <span style="font-family: 'Ubuntu', sans-serif; font-size: 15px;">Client ID</span>
-                 <input type="text" class="text-item" nbInput  placeholder="Enter your Client id">
-            </div>
-            
-            <div class="container-item">
-                Client Secret <input type="text" class="text-item" nbInput placeholder="Enter your Client secret">
-            </div>
-            
-            <div class="container-item">
-                URL of the website <input type="text" class="text-item" nbInput placeholder="http://websitename.com/">
-            </div>
-
-            <div class="container-item">
-                Grant Token <input type="text" class="text-item" nbInput placeholder="instruction on how to generate grant token">
-            </div>               
-        </div>-->
+        
+        <div class="save-button" style="margin-top: -25px;">
+            <button  (click)="zohoApiIntegration()" class='save-btn'>SAVE</button>
+        </div>        
+    
     </nb-card-body>
-    <nb-card-footer>
-      
-            <button mat-raised-button  (click)="close()" class='btn'>CANCEL</button>
-        
-        
-            <button mat-raised-button  (click)="zohoApiIntegration()" class='btn'>SAVE</button>
-        
-    </nb-card-footer>
-</nb-card>
+
+</nb-card> 
