@@ -42,7 +42,7 @@ label{
 }
 
 nb-card-header{
-    border-bottom: 1.3px  solid #DDDBDB;
+    border-bottom: 1px  solid #DDDBDB;
 }
 
 ::ng-deep .custom-tooltip{
@@ -57,7 +57,7 @@ nb-card-header{
     width: 285px;    
     margin-bottom:15px;
 
-   border: 1.8px  solid #dadfe6 !important;
+   border: 1.8px solid #DDDBDB !important;
    box-sizing: border-box;
    border-radius: 5px;
 }

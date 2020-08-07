@@ -10,7 +10,7 @@
 }
 
 nb-card-header{
-    border-bottom: 1.3px  solid #DDDBDB;
+    border-bottom: 1px  solid #DDDBDB;
 }
 
 img{
@@ -45,6 +45,7 @@ nb-card-body{
 }
 .btn:focus{
     border:none;
+    outline: none;
 }
 .btn:hover{ 
     box-shadow: 0 0 6px #44377c;  
@@ -53,4 +54,5 @@ nb-card-body{
 .btn:active{
   transform: translateY(1.5px);
   background-color: linear-gradient(180deg, #523C87 0%, #2CA2C5 100%);
+  outline: none;
 }

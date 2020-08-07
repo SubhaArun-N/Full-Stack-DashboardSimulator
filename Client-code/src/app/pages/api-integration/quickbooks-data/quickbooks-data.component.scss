@@ -7,8 +7,6 @@ nb-card{
     margin-top:-110px;
 }
 
-
-
 h4{
     font-size: 18px;
     font-family: Open Sans;
@@ -42,7 +40,7 @@ label{
 }
 
 nb-card-header{
-    border-bottom: 1.3px  solid #DDDBDB;
+    border-bottom: 1px  solid #DDDBDB;
 }
 
 ::ng-deep .custom-tooltip{
@@ -84,7 +82,7 @@ nb-card-header{
 .save-btn:focus,
 .save-btn:active{
     border:none;
-	outline:none;
+    outline: none;
 }
 .save-btn:hover{ 
     box-shadow: 0 0 6px #44377c;  
