@@ -84,6 +84,7 @@ nb-card-header{
 .save-btn:focus,
 .save-btn:active{
     border:none;
+	outline:none;
 }
 .save-btn:hover{ 
     box-shadow: 0 0 6px #44377c;  
