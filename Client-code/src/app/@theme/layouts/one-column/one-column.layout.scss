@@ -47,8 +47,8 @@ nb-layout-header{
 
 ::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a .menu-title 
 {
-  transform: translate3d(-1rem, 0.9rem, 0);
-  //text-align: center;
+ transform: translate3d(-0.9rem, 1rem, 0);
+  font-size: 12px;
 }
 
 
