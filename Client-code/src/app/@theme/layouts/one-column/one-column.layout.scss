@@ -45,29 +45,30 @@ nb-layout-header{
   text-align: center;
 }
 
-::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a .menu-title 
+::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a .menu-title
 {
- transform: translate3d(-0.9rem, 1rem, 0);
+  
   font-size: 12px;
-}
-
-
-::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-0{
-  transform: translate3d(-1.7rem, 1rem, 0); 
-  font-size: 12px;
+  transform: translate3d(-1.6rem, 1.2rem, 0); 
   text-align: center;
-}
-
-::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-1{
-  transform: translate3d(-1.7rem, 1rem, 0); 
-  font-size: 12px;
-  text-align: center;
-}
-
-::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-2{
-  transform: translate3d(-1.7rem, 1rem, 0); 
-  font-size: 12px;
-  text-align: center;
+  //text-align: left;
+  ::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a .menu-title.ng-tns-c118-0{
+    transform: translate3d(-2.7rem, 2.5rem, 0); 
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  ::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-1{
+    transform: translate3d(-2.7rem, 2.5rem, 0); 
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  ::ng-deep  .nb-theme-default nb-sidebar.expanded nb-menu .menu-item a .menu-title.ng-tns-c118-2{
+    transform: translate3d(-1.7rem, 1rem, 0); 
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 
