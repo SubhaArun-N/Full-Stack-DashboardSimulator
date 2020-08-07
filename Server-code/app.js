@@ -34,5 +34,26 @@ app.post('/pages/api-integration', (req, res) =>{
         })
 });
 
+
+app.post('/pages/quickbooks-integration', (req, res) =>{   
+    console.log("Inside quickbooks integration"); 
+    let user = req.body;
+    var sql = 'INSERT INTO quickbooks_integration SET?';
+    var values = {'client_id': user.client_id, 'client_secret': user.client_secret,
+                  'website_url': user.website_url}
+    
+     connect.connection()
+        .then((con) => {
+            con.query(sql, values, (err, rows, fields) => {
+                if(!err){
+                    res.send({status:1});
+                }else{
+                    console.log(err);
+                }
+            })
+        })
+});
+
+
 app.listen(process.env.PORT, () => console.log('Server is ready on localhost:' + process.env.PORT));
 

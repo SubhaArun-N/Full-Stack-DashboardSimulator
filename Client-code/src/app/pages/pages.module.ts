@@ -25,6 +25,7 @@ import { ZohocrmDataComponent } from './api-integration/zohocrm-data/zohocrm-dat
 import { QuickbooksDataComponent } from './api-integration/quickbooks-data/quickbooks-data.component';
 import { ZohointegrationInformationComponent } from './api-integration/zohointegration-information/zohointegration-information.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { QuickbooksintegrationInformationComponent } from './api-integration/quickbooksintegration-information/quickbooksintegration-information.component';
 
 
 
@@ -58,6 +59,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ZohocrmDataComponent,
     QuickbooksDataComponent,
     ZohointegrationInformationComponent,
+    QuickbooksintegrationInformationComponent,
     
   ],
   providers: [    

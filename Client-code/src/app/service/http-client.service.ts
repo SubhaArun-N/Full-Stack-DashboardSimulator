@@ -23,6 +23,20 @@ zohoApiIntegration(newZohoIntegtaion:any):Observable<any>
 return this.httpClient.post('http://localhost:3000/pages/api-integration',newZohoIntegtaion,httpOptions);    
 }
 
+quickbooksApiIntegration(newQuickbooksIntegration:any):Observable<any>
+{
+  const httpOptions = {
+    headers: new HttpHeaders(
+    { 
+       'Authorization': 'Your Token',
+       'Content-Type': 'application/json'
+    })
+}
+
+//const body=JSON.stringify(newZohoIntegtaion);
+return this.httpClient.post('http://localhost:3000/pages/quickbooks-integration',newQuickbooksIntegration,httpOptions);    
+}
+
 saveUserDetails(newUserDetail:any):Observable<any>
 {
   const httpOptions = 

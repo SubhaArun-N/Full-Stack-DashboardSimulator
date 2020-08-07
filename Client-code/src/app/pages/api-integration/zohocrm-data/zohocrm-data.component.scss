@@ -4,7 +4,7 @@ nb-card{
     height: 365px; 
     background: #FFFFFF;
     border-radius: 17px;
-    margin-top:-50px;
+    margin-top:-110px;
 }
 
 
@@ -36,9 +36,11 @@ label{
 .close{
     margin-top: -40px;
 }
-.close:focus{
-    border: none;
+::ng-deep .close:focus,
+::ng-deep .close:active{
+    outline: none;
 }
+
 nb-card-header{
     border-bottom: 1.3px  solid #DDDBDB;
 }
@@ -81,6 +83,7 @@ nb-card-header{
 .save-btn:focus,
 .save-btn:active{
     border:none;
+    outline: none;
 }
 .save-btn:hover{ 
     box-shadow: 0 0 6px #44377c;  

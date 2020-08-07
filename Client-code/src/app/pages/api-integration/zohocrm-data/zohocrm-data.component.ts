@@ -52,7 +52,7 @@ export class ZohocrmDataComponent implements OnInit {
         result => {
           if(result.status==1){
             this.submitted=true;
-            this.notifyService.showSuccess("You are registered!", "Ellie Zoho");
+            this.notifyService.showSuccess("Data entered successfully!", "Ellie Zoho");
             this.close();
           }     
           
