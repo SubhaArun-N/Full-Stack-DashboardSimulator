@@ -1,6 +1,7 @@
 Requirements:
 1. Node.js
 2. Angular client 
+3. MySql
 
 To run the Server side code:
 1. Clone/download the Server side code
