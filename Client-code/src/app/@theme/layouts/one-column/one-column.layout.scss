@@ -22,13 +22,13 @@ nb-layout-header{
  @include nb-install-component() {
   .menu-sidebar ::ng-deep  .main-container.main-container-fixed {
    height: 638px;
-   width: 170px;   
+   width: 160px;   
  }
  }
  
  @include nb-install-component(){
    .expanded{
-     width: 170px;
+     width: 160px;
    }
  }
 
@@ -44,6 +44,7 @@ nb-layout-header{
   animation-name: pulse-light; 
   text-align: center;
 }
+
 
 ::ng-deep .nb-theme-default nb-sidebar.expanded nb-menu .menu-items > .menu-item a .menu-title
 {
