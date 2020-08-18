@@ -7,17 +7,22 @@
 
         <form #loginUser="ngForm" (ngSubmit)="onSubmit()">
 
-        <div class="input-field">
-            <input type="text" id="username" placeholder="" [(ngModel)]="email" name="email" required="">
-            <label>Email</label>
+        <div class="form-group">
+            <div class="input-field">
+                <input type="text" id="username" placeholder="" [(ngModel)]="email" name="email" required="">
+                <label>Email</label>
+            </div>
+    
+            <div class="input-field">
+                <input type="password" id="password" placeholder="" [(ngModel)]="password" name="password" required="">
+                <label>Password</label>
+            </div>
         </div>
 
-        <div class="input-field">
-            <input type="password" id="password" placeholder="" [(ngModel)]="password" name="password" required="">
-            <label>Password</label>
+        <div>
+            <a style="color: white;"  routerLink="/auth/forgot-password" class="forgot-password">Forgot Password?</a> 
         </div>
-
-        <a style="color: white;"  routerLink="/auth/forgot-password" class="forgot-password">Forgot Password?</a>
+        
 
         <div class="login">
             <button  mat-raised-button class="btn btn-block btn-hero-success">Login</button>
@@ -25,6 +30,8 @@
 
     </form>
 
-    <a style="color: white;" routerLink="/auth/signUp" class="create-account">Create New Account </a>
+    <div>        
+        <a style="color: white;" routerLink="/auth/signUp" class="create-account">Create New Account </a>
+    </div>
 
 </div>
