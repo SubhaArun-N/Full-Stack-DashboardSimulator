@@ -6,37 +6,42 @@
     <form #userDetails="ngForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group">
-        <input matInput type="text"  class="form-control" id="username" placeholder=""  name="userName" [(ngModel)]="username" required="">
-        <label>Full Name</label>
+        <div class="username-input-field">
+            <input matInput type="text"  class="form-control" id="username" placeholder=""  name="userName" [(ngModel)]="username" required="">
+            <label>Full Name</label>
+        </div>      
+
+        <div class="email-input-field">
+            <input matInput type="email"  class="form-control" id="email" name="email" [(ngModel)]="email" required="">
+            <label>Email</label>
+        </div>
+    
+        <div class="phone-input-field">
+            <input matInput type="text"  class="form-control" id="phone" placeholder="" [(ngModel)]="phone"  name="phone" required>
+            <label>Phone number</label>
+        </div>
+    
+        <div class="pwd-input-field">
+            <input matInput type="password"  class="form-control" id="password" placeholder=""  name="password" required="">
+            <label>Password</label>
+        </div>
+    
+        <div class="rpwd-input-field">
+            <input matInput type="password"  class="form-control" id="repeatPassword" placeholder="" [(ngModel)]="password" name="repeatPassword" required="">
+            <label>Repeat password</label>
+        </div>  
+
     </div>
 
-    <div class="form-group">
-        <input matInput type="email"  class="form-control" id="email" name="email" [(ngModel)]="email" required="">
-        <label>Email</label>
-    </div>
-
-    <div class="form-group">
-        <input matInput type="text"  class="form-control" id="phone" placeholder="" [(ngModel)]="phone"  name="phone" required>
-        <label>Phone number</label>
-    </div>
-
-    <div class="form-group">
-        <input matInput type="password"  class="form-control" id="password" placeholder=""  name="password" required="">
-        <label>Password</label>
-    </div>
-
-    <div class="form-group">
-        <input matInput type="password"  class="form-control" id="repeatPassword" placeholder="" [(ngModel)]="password" name="repeatPassword" required="">
-        <label>Repeat password</label>
-    </div>  
-
-</form> 
-
-    <div class="signup">
-        <button mat-raised-button (click)="saveUserDetails()" class="btn">Sign up</button>
+    <div class="signup-btn">
+        <button mat-raised-button (click)="saveUserDetails()" class="btn btn-block btn-hero-success">Sign up</button>
     </div> 
     
+</form> 
 
-    <a style="color: white;" routerLink="/auth/signIn" class="signin">Already have an account? </a>   
+<div>
+    <a style="color: white;" routerLink="/auth/signIn" class="signin">Already have an account? </a> 
+</div>
+      
 
 </div>
