@@ -100,7 +100,8 @@ someFunction(){
     if (title == "Log out")
     {
       this.authenticationService.signOut();
-      this.router.navigate(['auth/signIn']);
+      this.router.navigate(['/auth/signIn']);
+      
     }
   }
 

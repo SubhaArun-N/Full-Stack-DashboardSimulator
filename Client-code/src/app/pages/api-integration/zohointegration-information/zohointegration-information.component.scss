@@ -13,6 +13,22 @@ nb-card-header{
     border-bottom: 1px  solid #DDDBDB;
 }
 
+h4{
+    font-size: 18px;
+    font-family: "Open Sans";
+   font-style: normal;
+   font-weight: 600;
+ }
+
+.close{
+    margin-top: -40px;    
+ 
+ }
+ ::ng-deep .close:focus,
+ ::ng-deep .close:active{
+    outline: none;
+ }
+
  li{
   font-size: 12px;
   padding-bottom: 5px;

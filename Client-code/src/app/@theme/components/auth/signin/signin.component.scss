@@ -115,10 +115,15 @@
   font-weight: normal;
 }
 
-.box form .form-group .input-field{
+.box form .form-group .email-input-field{
     position: relative;
     padding:13px;
  }
+ .box form .form-group .pwd-input-field{
+  position: absolute;
+  left:13px;
+  top:258px;
+}
  .box form div label{
     position: absolute;
     margin-left: -275px;
@@ -137,11 +142,22 @@
    opacity: 0.6;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+.email-input-field input:focus ~ label,
+.email-input-field input:valid ~ label {
   transform: translate3d(-0.2rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
   left: 360px !important;
   top: -6.5px !important;    
+  font-size: 12px;
+  font-weight: bold;
+  border: none !important;
+}
+
+
+.pwd-input-field input:focus ~ label,
+.pwd-input-field input:valid ~ label {
+  transform: translate3d(-0.2rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
+  left: 345px !important;
+  top: -20px !important;    
   font-size: 12px;
   font-weight: bold;
   border: none !important;
@@ -212,6 +228,4 @@ line-height: 12px;
 
 color: #FFFFFF;
 }
-
-
 
