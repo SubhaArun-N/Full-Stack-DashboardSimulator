@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   firstname = localStorage.getItem("firstname");
   id = localStorage.getItem("user_id")
 
-  userMenu = [ { title: 'Log out' } ];
+  userMenu = [ {title: 'Forgot password'}, { title: 'Log out' } ];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -102,6 +102,8 @@ someFunction(){
       this.authenticationService.signOut();
       this.router.navigate(['/auth/signIn']);
       
+    }else if(title == "Forgot password"){
+      this.router.navigate(['pages/forgotpassword']);
     }
   }
 

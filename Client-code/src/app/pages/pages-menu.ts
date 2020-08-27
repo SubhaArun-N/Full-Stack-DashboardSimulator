@@ -15,6 +15,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Field Mapping',
     icon: 'map-outline',
+    link: '/pages/fieldmapping'
          
   },
  

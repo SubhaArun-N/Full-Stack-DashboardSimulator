@@ -16,6 +16,11 @@
         <div class="pwd-input-field">
             <input type="password" id="password" placeholder="" [(ngModel)]="password" name="password" required="">
             <label>Password</label>
+            <span class="icon">
+                                               
+                <i class="fa fa-lock" id="lock-icon" (click)="showpwd()"></i>
+                <!-- <i class="fa fa-eye-slash"  (click)="showpwd()" ></i> -->
+            </span>
         </div>
     </div>
 

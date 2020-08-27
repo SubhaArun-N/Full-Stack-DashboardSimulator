@@ -24,11 +24,23 @@
         <div class="pwd-input-field">
             <input matInput type="password"  class="form-control" id="password" placeholder=""  name="password" required="">
             <label>Password</label>
+
+            <span class="icon">
+                                               
+                <i class="fa fa-lock" id="lock-icon" (click)="showpwd()"></i>
+                <!-- <i class="fa fa-eye-slash"  (click)="showpwd()" ></i> -->
+            </span>
         </div>
     
         <div class="rpwd-input-field">
-            <input matInput type="password"  class="form-control" id="repeatPassword" placeholder="" [(ngModel)]="password" name="repeatPassword" required="">
+            <input matInput type="password"  class="form-control" id="password" placeholder="" [(ngModel)]="password" name="repeatPassword" required="">
             <label>Repeat password</label>
+
+            <span class="icon">
+                                               
+                <i class="fa fa-lock" id="lock-icon" (click)="showpwd()"></i>
+                <!-- <i class="fa fa-eye-slash"  (click)="showpwd()" ></i> -->
+            </span>
         </div>  
 
     </div>

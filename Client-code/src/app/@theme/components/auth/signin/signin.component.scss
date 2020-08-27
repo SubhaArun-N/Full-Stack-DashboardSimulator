@@ -229,3 +229,16 @@ line-height: 12px;
 color: #FFFFFF;
 }
 
+.icon{
+  position:absolute;
+  right: 15px;
+  bottom: 50%;
+  transform: translateY(50%);
+  border:none; 
+  border-radius:100%;
+  outline:none;
+  text-align:center;
+  font-size: smaller;
+  padding:2px;
+}
+

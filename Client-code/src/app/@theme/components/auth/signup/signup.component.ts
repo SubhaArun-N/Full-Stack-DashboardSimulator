@@ -27,6 +27,22 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  showpwd(){
+    // console.log("Inside show password")
+    var input=document.getElementById("password")
+    // var icon=document.getElementById("lock-icon").className
+    // console.log("Input tag..",input['type'])
+    // console.log("TYPE..",typeof(input))
+    if (input['type'] == "password") {
+      input['type'] = "text";
+      document.getElementById("lock-icon").className="fa fa-unlock"
+  } else {
+      input['type'] = "password";
+      document.getElementById("lock-icon").className="fa fa-lock"
+  }
+  }
+
   saveUserDetails(){
     console.log('inside save user details');
     this.userDetails = { username : this.username, email:this.email, phone:this.phone, password : this.password};

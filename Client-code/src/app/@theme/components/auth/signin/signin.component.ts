@@ -37,6 +37,21 @@ export class SigninComponent implements OnInit {
     }
   }  
 
+  showpwd(){
+    // console.log("Inside show password")
+    var input=document.getElementById("password")
+    // var icon=document.getElementById("lock-icon").className
+    // console.log("Input tag..",input['type'])
+    // console.log("TYPE..",typeof(input))
+    if (input['type'] == "password") {
+      input['type'] = "text";
+      document.getElementById("lock-icon").className="fa fa-unlock"
+  } else {
+      input['type'] = "password";
+      document.getElementById("lock-icon").className="fa fa-lock"
+  }
+  }
+
   /*checkUserLogin(){  
     if(this.loginService.authenticate(this.email, this.password)){
       this.router.navigate(['pages/dashboard']);

@@ -99,11 +99,14 @@ a{
 }
 
 ::ng-deep .nb-theme-default nb-context-menu{
-  width:60px !important;
+  width:160px !important;
   margin-left:-130px;
   border: 1.5px solid #514189 !important;
 }
 
 ::ng-deep .context-menu .menu-items > .menu-item a .menu-title {
   color: #000000;
+}
+::ng-deep .context-menu .menu-items > .menu-item a .menu-title:hover{
+  color: #514189;
 }

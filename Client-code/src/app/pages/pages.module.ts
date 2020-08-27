@@ -26,6 +26,11 @@ import { QuickbooksDataComponent } from './api-integration/quickbooks-data/quick
 import { ZohointegrationInformationComponent } from './api-integration/zohointegration-information/zohointegration-information.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { QuickbooksintegrationInformationComponent } from './api-integration/quickbooksintegration-information/quickbooksintegration-information.component';
+import { FieldmappingComponent } from './fieldmapping/fieldmapping.component';
+import { CustomersComponent } from './fieldmapping/customers/customers.component';
+import { ProductsComponent } from './fieldmapping/products/products.component';
+import { AccountsComponent } from './fieldmapping/accounts/accounts.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 
@@ -60,6 +65,11 @@ import { QuickbooksintegrationInformationComponent } from './api-integration/qui
     QuickbooksDataComponent,
     ZohointegrationInformationComponent,
     QuickbooksintegrationInformationComponent,
+    FieldmappingComponent,
+    CustomersComponent,
+    ProductsComponent,
+    AccountsComponent,
+    ForgotpasswordComponent,
     
   ],
   providers: [    
