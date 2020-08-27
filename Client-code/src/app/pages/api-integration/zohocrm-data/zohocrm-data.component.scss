@@ -16,7 +16,7 @@ h4{
    font-weight: 600;
 }
 
-.btn {    
+.btn {  
    
    background: #4C4C91;
    color: white;
@@ -91,3 +91,13 @@ nb-card-header{
 .save-btn:active{
   transform: translateY(1.5px);
 }
+
+.info-icon1{
+    top:34% !important;
+    left: 244px;
+    transform: translateY(-50%) !important;
+    height: 25px !important;
+    width: 23px !important;
+    padding-left: 6px !important;
+    font-size: xx-small;
+  }

@@ -15,7 +15,7 @@
     </nb-card-header>
 
     <nb-card-body style="margin-top: 10px;">
-        <form  #receivedOrganization="ngForm" (ngSubmit)="onSubmit()">
+        <form  #receivedOrganization="ngForm">
                
                 <div class="row justify-content-center">
                 <div class="col-md-3">
@@ -46,7 +46,13 @@
                     <label class="" translate>Grant Token</label>
                 </div>
                 <div class="col-md-6 mt-2 mb-3">
-                    <input nbInput  id="grandtoken"  placeholder="" [(ngModel)]="grant_token" name="granttoken"  required />                    
+                    <input nbInput  id="grandtoken"  placeholder="" [(ngModel)]="grant_token" name="granttoken"  required /> 
+                    <span>
+                        <button matTooltip="Click here to generate token" matTooltipPosition="right"  matTooltipClass="custom-tooltip" class="btn btn-hero-info btn-small py-0 position-absolute info-icon1">                        
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </button>
+                    </span>  
+                                     
                 </div>               
             </div>
         </form>
