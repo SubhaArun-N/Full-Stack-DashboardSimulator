@@ -142,6 +142,20 @@
    opacity: 0.6;
 }
 
+.box form div .icon{
+  position:absolute;
+  right: 15px;
+  bottom: 50%;
+  transform: translateY(50%);
+  border:none; 
+  border-radius:100%;
+  outline:none;
+  text-align:center;
+  font-size: smaller;
+  padding:2px;
+}
+
+
 .email-input-field input:focus ~ label,
 .email-input-field input:valid ~ label {
   transform: translate3d(-0.2rem, -0.3rem, 0) scale3d(0.92, 0.92, 1);
@@ -229,16 +243,4 @@ line-height: 12px;
 color: #FFFFFF;
 }
 
-.icon{
-  position:absolute;
-  right: 15px;
-  bottom: 50%;
-  transform: translateY(50%);
-  border:none; 
-  border-radius:100%;
-  outline:none;
-  text-align:center;
-  font-size: smaller;
-  padding:2px;
-}
 
